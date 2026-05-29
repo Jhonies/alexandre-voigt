@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npx next *)",
+      "Bash(curl -s -o page.html -w \"HTTP %{http_code} | Size: %{size_download} bytes\\\\n\" http://localhost:3210/)",
+      "Bash(npx playwright-core *)",
+      "Bash(node .screenshot.mjs)",
+      "Bash(node ./.screenshot.mjs)",
+      "Bash(NODE_OPTIONS=\"--max-old-space-size=4096\" npx next build)",
+      "Bash(NEXT_TELEMETRY_DISABLED=1 NODE_OPTIONS=\"--max-old-space-size=4096\" NEXT_PRIVATE_WORKER=0 npx next build --no-lint)",
+      "Bash(curl -s -o /tmp/page.html -w \"HTTP %{http_code} | %{size_download} bytes\\\\n\" http://localhost:3210/)",
+      "Read(//tmp/**)",
+      "Bash(node ./.shot-livros.mjs)",
+      "Bash(node *)",
+      "Bash(npm run *)",
+      "Bash(npm audit *)",
+      "Bash(npm view *)"
+    ]
+  }
+}
