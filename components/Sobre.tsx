@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Reveal from './Reveal';
 
 export default function Sobre() {
@@ -31,37 +30,9 @@ export default function Sobre() {
           </div>
         </Reveal>
 
-        {/* Body grid */}
+        {/* Body */}
         <div className="grid lg:grid-cols-12 gap-14 lg:gap-20 items-start">
-          {/* Portrait column */}
-          <Reveal className="lg:col-span-5">
-            <div className="relative max-w-md mx-auto lg:mx-0">
-              <div className="relative aspect-[4/5] w-full overflow-hidden border border-navy-900/15">
-                <Image
-                  src="/images/alexandre-voigt.jpeg"
-                  alt="Dr. Alexandre Voigt — retrato institucional"
-                  fill
-                  sizes="(min-width: 1024px) 40vw, 90vw"
-                  className="object-cover object-[center_18%]"
-                />
-              </div>
-              {/* Caption block */}
-              <div className="mt-6 flex items-center gap-4">
-                <span className="h-px w-10 bg-gold-deep" />
-                <div>
-                  <p className="font-display italic text-navy-900 text-lg leading-none">
-                    Alexandre de Oliveira Voigt
-                  </p>
-                  <p className="mt-1 text-[11px] uppercase tracking-wider3 text-navy-900/60">
-                    Advogado · OAB/SP&nbsp;548.991
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-
-          {/* Text column */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-10 lg:col-start-2">
             <Reveal stagger className="space-y-7 text-navy-900/85 text-[15.5px] md:text-[16px] leading-[1.85] font-light">
               <p>
                 <span className="font-display italic text-gold-deep text-xl mr-1">F</span>
@@ -91,7 +62,7 @@ export default function Sobre() {
             </Reveal>
 
             {/* Credentials grid */}
-            <Reveal stagger className="mt-12 grid sm:grid-cols-3 gap-x-6 gap-y-8 border-t border-navy-900/10 pt-10">
+            <Reveal stagger className="mt-14 grid sm:grid-cols-3 gap-x-6 gap-y-8 border-t border-navy-900/10 pt-10">
               <div>
                 <p className="text-[10px] uppercase tracking-wider3 text-navy-900/55 mb-2">
                   Formação
