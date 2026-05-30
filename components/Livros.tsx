@@ -19,7 +19,7 @@ const livros: Livro[] = [
     subtitle: 'A justiça que solta, o crime que retorna',
     description:
       'Reflexão crítica sobre segurança pública, percepção social do crime e os limites da resposta do Estado, escrita a partir da vivência de três décadas no serviço policial militar.',
-    link: process.env.NEXT_PUBLIC_HOTMART_LIVRO1_URL ?? '',
+    link: 'https://alexandrevoigt.hotmart.host/a-sociedade-do-medo-a-justica-que-solta-o-crime-que-retorna-4fddb600-38f4-4b18-a7a4-5d6b6f33f715',
     ctaLabel: 'Adquirir no Hotmart',
   },
   {
@@ -29,7 +29,7 @@ const livros: Livro[] = [
     subtitle: 'Feminicídio — uma violência imperdoável',
     description:
       'Obra coautoral dedicada ao enfrentamento do feminicídio no Brasil, com análise da legislação, dos mecanismos de proteção e das responsabilidades sociais envolvidas.',
-    link: process.env.NEXT_PUBLIC_HOTMART_LIVRO2_URL ?? '',
+    link: 'https://go.hotmart.com/N103531012W',
     ctaLabel: 'Adquirir no Hotmart',
   },
   {
@@ -39,7 +39,7 @@ const livros: Livro[] = [
     subtitle: 'Guia prático para policiais militares · 3ª edição',
     description:
       'Manual técnico voltado a profissionais da segurança pública: orienta sobre direitos, identificação de abusos e instrumentos de proteção da carreira, da saúde e da honra.',
-    link: process.env.NEXT_PUBLIC_LIVRO3_URL ?? '',
+    link: 'https://drive.google.com/file/d/1wy7SyEoeRy0vpRWkYXWfaj7Y3HQZZi-0/view?usp=sharing',
     ctaLabel: 'Acessar obra',
   },
 ];
