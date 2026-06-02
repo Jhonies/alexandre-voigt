@@ -1,3 +1,4 @@
+import ScrollProgress from '@/components/ScrollProgress';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Sobre from '@/components/Sobre';
@@ -10,6 +11,7 @@ import Footer from '@/components/Footer';
 export default function Page() {
   return (
     <main>
+      <ScrollProgress />
       <Navbar />
       <Hero />
       <Sobre />
