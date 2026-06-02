@@ -65,8 +65,6 @@ export default function Hero() {
             >
               <span>Advogado</span>
               <span className="text-gold/60">·</span>
-              <span>Inscrito na OAB</span>
-              <span className="text-gold/60">·</span>
               <span>Tenente-coronel da PM (reserva)</span>
             </div>
 
