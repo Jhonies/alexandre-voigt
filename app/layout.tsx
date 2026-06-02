@@ -20,7 +20,7 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: 'Dr. Alexandre Voigt — Advogado | Direito Aeronáutico',
   description:
-    'Dr. Alexandre Voigt, advogado inscrito na OAB e Major da Polícia Militar (reserva), com atuação em Direito Aeronáutico e defesa dos direitos do passageiro aéreo.',
+    'Dr. Alexandre Voigt, advogado inscrito na OAB e Tenente-coronel da Polícia Militar (reserva), com atuação em Direito Aeronáutico e defesa dos direitos do passageiro aéreo.',
   authors: [{ name: 'Dr. Alexandre Voigt' }],
   openGraph: {
     title: 'Dr. Alexandre Voigt — Advogado',

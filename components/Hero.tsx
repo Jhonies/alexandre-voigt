@@ -43,7 +43,7 @@ export default function Hero() {
             <div className="flex items-center gap-4 mb-10 animate-fade-in" style={{ animationDelay: '0.1s', opacity: 0 }}>
               <span className="h-px w-12 bg-gold/70" />
               <span className="text-[11px] uppercase tracking-wider4 text-gold/90 font-medium">
-                Advocacia • Direito Aeronáutico
+                Advocacia
               </span>
             </div>
 
@@ -67,9 +67,7 @@ export default function Hero() {
               <span className="text-gold/60">·</span>
               <span>Inscrito na OAB</span>
               <span className="text-gold/60">·</span>
-              <span>Major da PM (reserva)</span>
-              <span className="text-gold/60">·</span>
-              <span>Direito Aeronáutico</span>
+              <span>Tenente-coronel da PM (reserva)</span>
             </div>
 
             {/* Descriptor paragraph */}

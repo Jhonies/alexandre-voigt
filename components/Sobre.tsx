@@ -42,7 +42,7 @@ export default function Sobre() {
                 doméstico e internacional.
               </p>
               <p>
-                A trajetória como <strong className="font-medium text-navy-900">Major da Polícia Militar</strong>{' '}
+                A trajetória como <strong className="font-medium text-navy-900">Tenente-coronel da Polícia Militar</strong>{' '}
                 — hoje na reserva — consolidou três valores que orientam o seu exercício
                 profissional na advocacia: o compromisso com a ética, a disciplina no
                 trato dos processos e a postura de servidor público diante do cidadão.
@@ -77,7 +77,7 @@ export default function Sobre() {
                   Carreira Pública
                 </p>
                 <p className="font-display text-navy-900 text-lg leading-tight">
-                  Major da PM/SP
+                  Tenente-coronel da PM/SP
                 </p>
                 <p className="text-[12.5px] text-navy-900/65 mt-1">Oficial reformado · reserva</p>
               </div>

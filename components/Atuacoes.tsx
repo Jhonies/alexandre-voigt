@@ -2,42 +2,25 @@ import Reveal from './Reveal';
 
 type IconProps = { className?: string };
 
-// Plane icon — paper-plane / institutional, not toy-like
-const IconPlane = ({ className = '' }: IconProps) => (
+// Shield with star — military justice
+const IconMilitaryShield = ({ className = '' }: IconProps) => (
   <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
     <path
-      d="M4 24l40-16-12 36-8-14-20-6z"
+      d="M24 6l14 5v14c0 8-6 14-14 17-8-3-14-9-14-17V11l14-5z"
       stroke="currentColor"
       strokeWidth="1"
       strokeLinejoin="round"
     />
-    <path d="M24 28L44 8" stroke="currentColor" strokeWidth="1" />
-  </svg>
-);
-
-// Luggage / suitcase
-const IconLuggage = ({ className = '' }: IconProps) => (
-  <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
-    <rect x="9" y="14" width="30" height="26" stroke="currentColor" strokeWidth="1" />
-    <path d="M18 14V9h12v5" stroke="currentColor" strokeWidth="1" />
-    <path d="M9 22h30M9 32h30" stroke="currentColor" strokeWidth="1" />
-    <path d="M24 14v26" stroke="currentColor" strokeWidth="1" />
-  </svg>
-);
-
-// Boarding pass / overbooking
-const IconTicket = ({ className = '' }: IconProps) => (
-  <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
     <path
-      d="M6 14h36v8a4 4 0 000 8v8H6v-8a4 4 0 000-8v-8z"
+      d="M24 17l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5-3.6-3.5 5-.7L24 17z"
       stroke="currentColor"
       strokeWidth="1"
+      strokeLinejoin="round"
     />
-    <path d="M30 14v8M30 28v8" stroke="currentColor" strokeWidth="1" strokeDasharray="2 3" />
   </svg>
 );
 
-// Scales of justice
+// Scales of justice — Cível
 const IconScales = ({ className = '' }: IconProps) => (
   <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
     <path d="M24 8v34" stroke="currentColor" strokeWidth="1" />
@@ -48,34 +31,71 @@ const IconScales = ({ className = '' }: IconProps) => (
   </svg>
 );
 
+// Bank façade — contratos bancários
+const IconBank = ({ className = '' }: IconProps) => (
+  <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
+    <path d="M4 18L24 6l20 12" stroke="currentColor" strokeWidth="1" strokeLinejoin="round" />
+    <path d="M6 18h36" stroke="currentColor" strokeWidth="1" />
+    <path d="M10 22v14M18 22v14M30 22v14M38 22v14" stroke="currentColor" strokeWidth="1" />
+    <path d="M4 40h40" stroke="currentColor" strokeWidth="1" />
+    <path d="M2 44h44" stroke="currentColor" strokeWidth="1" />
+  </svg>
+);
+
+// Document with seal — previdência
+const IconDocSeal = ({ className = '' }: IconProps) => (
+  <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
+    <path d="M10 6h20l10 10v26H10z" stroke="currentColor" strokeWidth="1" strokeLinejoin="round" />
+    <path d="M30 6v10h10" stroke="currentColor" strokeWidth="1" />
+    <circle cx="24" cy="30" r="5" stroke="currentColor" strokeWidth="1" />
+    <path d="M21 34l-2 6 5-3 5 3-2-6" stroke="currentColor" strokeWidth="1" strokeLinejoin="round" />
+  </svg>
+);
+
+// Shopping bag — consumidor
+const IconBag = ({ className = '' }: IconProps) => (
+  <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
+    <path d="M10 16h28l-2 26H12L10 16z" stroke="currentColor" strokeWidth="1" strokeLinejoin="round" />
+    <path d="M18 16v-4a6 6 0 0112 0v4" stroke="currentColor" strokeWidth="1" />
+    <path d="M18 24v2M30 24v2" stroke="currentColor" strokeWidth="1" />
+  </svg>
+);
+
 const cards = [
   {
-    Icon: IconPlane,
-    title: 'Cancelamento e atraso de voos',
+    Icon: IconMilitaryShield,
+    title: 'Advocacia Penal Militar',
     body:
-      'Orientação jurídica sobre os direitos do passageiro previstos para situações de cancelamento, alteração de itinerário e atraso de voos domésticos e internacionais.',
-    ref: 'Resolução ANAC nº 400/2016',
-  },
-  {
-    Icon: IconLuggage,
-    title: 'Extravio e dano de bagagem',
-    body:
-      'Atuação informativa na defesa de passageiros em casos de extravio temporário, extravio definitivo, dano ou violação de bagagens despachadas ou de mão.',
-    ref: 'Convenção de Montreal · CDC',
-  },
-  {
-    Icon: IconTicket,
-    title: 'Overbooking e preterição',
-    body:
-      'Esclarecimento sobre os direitos do passageiro em situações de preterição de embarque por excesso de reservas, incluindo as obrigações de assistência da companhia.',
-    ref: 'Resolução ANAC nº 400/2016',
+      'Atuação técnica em processos da Justiça Militar — defesa em inquéritos policiais militares, conselhos de justificação e procedimentos administrativos disciplinares envolvendo praças e oficiais.',
+    ref: 'CPM · CPPM · Lei nº 13.491/17',
   },
   {
     Icon: IconScales,
-    title: 'Direitos do passageiro aéreo',
+    title: 'Direito Cível',
     body:
-      'Informações gerais sobre os direitos previstos na legislação aeronáutica brasileira, no Código de Defesa do Consumidor e nas convenções internacionais aplicáveis.',
-    ref: 'CDC · Código Brasileiro de Aeronáutica',
+      'Orientação consultiva e contenciosa em responsabilidade civil, obrigações, contratos e demais relações privadas — conduzidas com rigor técnico e atenção ao caso concreto.',
+    ref: 'Código Civil · CPC',
+  },
+  {
+    Icon: IconBank,
+    title: 'Contratos Bancários',
+    body:
+      'Análise e revisão de cláusulas abusivas em contratos bancários, capitalização de juros, tarifas indevidas e renegociação de dívidas com instituições financeiras.',
+    ref: 'CDC · Súmulas do STJ',
+  },
+  {
+    Icon: IconDocSeal,
+    title: 'Direito Previdenciário',
+    body:
+      'Atuação na concessão e revisão de benefícios junto ao INSS — aposentadorias, auxílios, pensões e benefícios assistenciais, nas vias administrativa e judicial.',
+    ref: 'Lei nº 8.213/91 · RGPS',
+  },
+  {
+    Icon: IconBag,
+    title: 'Direito do Consumidor',
+    body:
+      'Defesa do consumidor em cobranças indevidas, vícios e defeitos de produtos e serviços, contratos de adesão e demais práticas abusivas no mercado de consumo.',
+    ref: 'CDC (Lei nº 8.078/90)',
   },
 ];
 
@@ -108,9 +128,9 @@ export default function Atuacoes() {
               </span>
             </div>
             <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.05]">
-              Quatro frentes do{' '}
-              <span className="serif-italic text-gold">Direito Aeronáutico</span>{' '}
-              em que o escritório atua.
+              Cinco frentes de{' '}
+              <span className="serif-italic text-gold">atuação jurídica</span>{' '}
+              em que o escritório dedica seu trabalho.
             </h2>
           </div>
           <div className="lg:col-span-5 lg:pl-8">
@@ -122,41 +142,46 @@ export default function Atuacoes() {
           </div>
         </Reveal>
 
-        {/* Cards grid */}
+        {/* Cards grid — 5 cards: last one spans full width on sm+ to balance the layout */}
         <Reveal stagger className="grid sm:grid-cols-2 gap-px bg-gold/15 border border-gold/15">
-          {cards.map(({ Icon, title, body, ref }, i) => (
-            <article
-              key={title}
-              className="group relative bg-navy-900 p-9 md:p-12 card-lift"
-            >
-              {/* Card index */}
-              <div className="flex items-start justify-between mb-8">
-                <span className="font-display italic text-gold/70 text-sm">
-                  /{String(i + 1).padStart(2, '0')}
-                </span>
-                <Icon className="w-12 h-12 text-gold/85 transition-transform duration-700 group-hover:rotate-[3deg] group-hover:scale-105" />
-              </div>
+          {cards.map(({ Icon, title, body, ref }, i) => {
+            const isLast = i === cards.length - 1;
+            return (
+              <article
+                key={title}
+                className={`group relative bg-navy-900 p-9 md:p-12 card-lift ${
+                  isLast ? 'sm:col-span-2' : ''
+                }`}
+              >
+                {/* Card index */}
+                <div className="flex items-start justify-between mb-8">
+                  <span className="font-display italic text-gold/70 text-sm">
+                    /{String(i + 1).padStart(2, '0')}
+                  </span>
+                  <Icon className="w-12 h-12 text-gold/85 transition-transform duration-700 group-hover:rotate-[3deg] group-hover:scale-105" />
+                </div>
 
-              <h3 className="font-display text-bone text-[1.65rem] md:text-[1.85rem] leading-tight mb-5">
-                {title}
-              </h3>
+                <h3 className="font-display text-bone text-[1.65rem] md:text-[1.85rem] leading-tight mb-5">
+                  {title}
+                </h3>
 
-              <p className="text-bone/70 text-[14.5px] leading-[1.75] font-light mb-7">
-                {body}
-              </p>
+                <p className="text-bone/70 text-[14.5px] leading-[1.75] font-light mb-7 max-w-2xl">
+                  {body}
+                </p>
 
-              <div className="flex items-center gap-3 pt-5 border-t border-bone/10">
-                <span className="h-px w-6 bg-gold/60" />
-                <span className="text-[10.5px] uppercase tracking-wider3 text-bone/55">
-                  {ref}
-                </span>
-              </div>
+                <div className="flex items-center gap-3 pt-5 border-t border-bone/10">
+                  <span className="h-px w-6 bg-gold/60" />
+                  <span className="text-[10.5px] uppercase tracking-wider3 text-bone/55">
+                    {ref}
+                  </span>
+                </div>
 
-              {/* Hover gold corner accent */}
-              <span className="pointer-events-none absolute top-0 right-0 w-0 h-px bg-gold transition-all duration-700 group-hover:w-1/2" />
-              <span className="pointer-events-none absolute bottom-0 left-0 w-0 h-px bg-gold transition-all duration-700 group-hover:w-1/2" />
-            </article>
-          ))}
+                {/* Hover gold corner accent */}
+                <span className="pointer-events-none absolute top-0 right-0 w-0 h-px bg-gold transition-all duration-700 group-hover:w-1/2" />
+                <span className="pointer-events-none absolute bottom-0 left-0 w-0 h-px bg-gold transition-all duration-700 group-hover:w-1/2" />
+              </article>
+            );
+          })}
         </Reveal>
 
         {/* Disclaimer footnote */}
