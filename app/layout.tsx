@@ -22,6 +22,10 @@ export const metadata: Metadata = {
   description:
     'Dr. Alexandre Voigt, advogado inscrito na OAB e Tenente-coronel da Polícia Militar (reserva), com atuação em Direito Aeronáutico e defesa dos direitos do passageiro aéreo.',
   authors: [{ name: 'Dr. Alexandre Voigt' }],
+  icons: {
+    icon: '/icon.png',
+    apple: '/icon.png',
+  },
   openGraph: {
     title: 'Dr. Alexandre Voigt — Advogado',
     description:
