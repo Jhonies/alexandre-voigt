@@ -16,7 +16,12 @@
       "Bash(npm run *)",
       "Bash(npm audit *)",
       "Bash(npm view *)",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "Bash(git checkout *)",
+      "Bash(npm ls *)",
+      "Bash(git add *)",
+      "Bash(git commit -m '@ *)",
+      "Bash(git commit *)"
     ]
   }
 }

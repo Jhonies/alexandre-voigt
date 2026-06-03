@@ -1,14 +1,16 @@
 import Reveal from './Reveal';
+import { safeHref } from '@/lib/safe-url';
 
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? '';
-const WHATSAPP_DISPLAY = process.env.NEXT_PUBLIC_WHATSAPP_DISPLAY ?? '';
-const WHATSAPP_HREF = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  'Olá, Dr. Alexandre. Gostaria de tirar uma dúvida sobre direitos do passageiro aéreo.'
-)}`;
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5513981522764';
+const WHATSAPP_DISPLAY = process.env.NEXT_PUBLIC_WHATSAPP_DISPLAY || '(13) 98152-2764';
+const WHATSAPP_HREF = safeHref(
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    'Olá, Dr. Alexandre. Gostaria de tirar uma dúvida sobre direitos do passageiro aéreo.'
+  )}`
+);
 
-const INSTAGRAM = process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? '';
-const LINKEDIN = process.env.NEXT_PUBLIC_LINKEDIN_URL ?? '';
-const EMAIL = process.env.NEXT_PUBLIC_EMAIL ?? '';
+const INSTAGRAM = safeHref(process.env.NEXT_PUBLIC_INSTAGRAM_URL || 'https://instagram.com/alexandre_voigt');
+const EMAIL = process.env.NEXT_PUBLIC_EMAIL || 'alexandrevoigt@adv.oabsp.org.br';
 
 const IconWhatsApp = ({ className = '' }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
@@ -30,13 +32,6 @@ const IconInstagram = ({ className = '' }: { className?: string }) => (
     <rect x="3" y="3" width="18" height="18" rx="4.5" stroke="currentColor" strokeWidth="1.3" />
     <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.3" />
     <circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" />
-  </svg>
-);
-
-const IconLinkedIn = ({ className = '' }: { className?: string }) => (
-  <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-    <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.3" />
-    <path d="M7 10v7M7 7.5v.01M11 10v7M11 13c0-2 1-3 2.5-3s2.5 1 2.5 3v4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
   </svg>
 );
 
@@ -175,31 +170,6 @@ export default function Contato() {
                     rel="noopener noreferrer"
                     className="text-gold/80 hover:text-gold transition"
                     aria-label="Abrir Instagram"
-                  >
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                      <path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="square" />
-                    </svg>
-                  </a>
-                </li>
-
-                <li className="py-4 flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-4">
-                    <IconLinkedIn className="w-5 h-5 text-gold" />
-                    <div>
-                      <p className="text-[10px] uppercase tracking-wider3 text-bone/55">
-                        LinkedIn
-                      </p>
-                      <p className="font-display text-bone text-[17px] mt-0.5">
-                        Alexandre Voigt
-                      </p>
-                    </div>
-                  </div>
-                  <a
-                    href={LINKEDIN}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gold/80 hover:text-gold transition"
-                    aria-label="Abrir LinkedIn"
                   >
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                       <path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="square" />
