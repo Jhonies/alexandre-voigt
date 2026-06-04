@@ -5,7 +5,7 @@ const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '551398152276
 const WHATSAPP_DISPLAY = process.env.NEXT_PUBLIC_WHATSAPP_DISPLAY || '(13) 98152-2764';
 const WHATSAPP_HREF = safeHref(
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    'Olá, Dr. Alexandre. Gostaria de tirar uma dúvida sobre direitos do passageiro aéreo.'
+    'Olá, Dr. Alexandre. Gostaria de tirar uma dúvida sobre o meu caso.'
   )}`
 );
 
@@ -127,76 +127,85 @@ export default function Contato() {
               </p>
 
               <ul className="divide-y divide-bone/10">
-                <li className="py-4 flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-4">
-                    <IconWhatsApp className="w-5 h-5 text-gold" />
-                    <div>
-                      <p className="text-[10px] uppercase tracking-wider3 text-bone/55">
-                        WhatsApp
-                      </p>
-                      <p className="font-display text-bone text-[17px] mt-0.5">
-                        {WHATSAPP_DISPLAY}
-                      </p>
-                    </div>
-                  </div>
+                <li className="group">
                   <a
                     href={WHATSAPP_HREF}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gold/80 hover:text-gold transition"
-                    aria-label="Abrir WhatsApp"
+                    className="py-4 flex items-center justify-between gap-4 w-full"
                   >
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                      <path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="square" />
-                    </svg>
+                    <div className="flex items-center gap-4">
+                      <IconWhatsApp className="w-5 h-5 text-gold group-hover:text-gold-soft transition-colors" />
+                      <div>
+                        <p className="text-[10px] uppercase tracking-wider3 text-bone/55">
+                          WhatsApp
+                        </p>
+                        <p className="font-display text-bone text-[17px] mt-0.5 group-hover:text-gold-soft transition-colors">
+                          {WHATSAPP_DISPLAY}
+                        </p>
+                      </div>
+                    </div>
+                    <span
+                      className="text-gold/80 group-hover:text-gold-soft group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="square" />
+                      </svg>
+                    </span>
                   </a>
                 </li>
 
-                <li className="py-4 flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-4">
-                    <IconInstagram className="w-5 h-5 text-gold" />
-                    <div>
-                      <p className="text-[10px] uppercase tracking-wider3 text-bone/55">
-                        Instagram
-                      </p>
-                      <p className="font-display text-bone text-[17px] mt-0.5">
-                        @alexandre_voigt
-                      </p>
-                    </div>
-                  </div>
+                <li className="group">
                   <a
                     href={INSTAGRAM}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gold/80 hover:text-gold transition"
-                    aria-label="Abrir Instagram"
+                    className="py-4 flex items-center justify-between gap-4 w-full"
                   >
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                      <path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="square" />
-                    </svg>
+                    <div className="flex items-center gap-4">
+                      <IconInstagram className="w-5 h-5 text-gold group-hover:text-gold-soft transition-colors" />
+                      <div>
+                        <p className="text-[10px] uppercase tracking-wider3 text-bone/55">
+                          Instagram
+                        </p>
+                        <p className="font-display text-bone text-[17px] mt-0.5 group-hover:text-gold-soft transition-colors">
+                          @alexandre_voigt
+                        </p>
+                      </div>
+                    </div>
+                    <span
+                      className="text-gold/80 group-hover:text-gold-soft group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="square" />
+                      </svg>
+                    </span>
                   </a>
                 </li>
 
-                <li className="py-4 flex items-center justify-between gap-4">
-                  <div className="flex items-center gap-4">
-                    <IconMail className="w-5 h-5 text-gold" />
-                    <div>
-                      <p className="text-[10px] uppercase tracking-wider3 text-bone/55">
-                        E-mail
-                      </p>
-                      <p className="font-display text-bone text-[17px] mt-0.5">
-                        {EMAIL}
-                      </p>
-                    </div>
-                  </div>
+                <li className="group">
                   <a
                     href={`mailto:${EMAIL}`}
-                    className="text-gold/80 hover:text-gold transition"
-                    aria-label="Enviar e-mail"
+                    className="py-4 flex items-center justify-between gap-4 w-full"
                   >
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                      <path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="square" />
-                    </svg>
+                    <div className="flex items-center gap-4">
+                      <IconMail className="w-5 h-5 text-gold group-hover:text-gold-soft transition-colors" />
+                      <div>
+                        <p className="text-[10px] uppercase tracking-wider3 text-bone/55">
+                          E-mail
+                        </p>
+                        <p className="font-display text-bone text-[17px] mt-0.5 group-hover:text-gold-soft transition-colors">
+                          {EMAIL}
+                        </p>
+                      </div>
+                    </div>
+                    <span
+                      className="text-gold/80 group-hover:text-gold-soft group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="square" />
+                      </svg>
+                    </span>
                   </a>
                 </li>
               </ul>
