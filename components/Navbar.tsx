@@ -22,11 +22,27 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  // The panel is a dropdown, not a modal — no scroll lock (locking the body
+  // would fight the smooth-scroll that an anchor click kicks off). Escape
+  // closes it, and so does scrolling away from it.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [open]);
+
+  // The bar must be opaque whenever the panel is open — otherwise the logo row
+  // stays transparent over the hero while the panel below it is solid.
+  const solid = scrolled || open;
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-navy-950/75 backdrop-blur-md border-b border-gold/15'
+        solid
+          ? 'bg-navy-950/90 backdrop-blur-md border-b border-gold/15'
           : 'bg-transparent border-b border-transparent'
       }`}
     >
@@ -34,6 +50,7 @@ export default function Navbar() {
         {/* Monogram */}
         <a
           href="#top"
+          onClick={() => setOpen(false)}
           className="group flex items-center gap-3"
           aria-label="Dr. Alexandre Voigt — início"
         >
@@ -72,15 +89,16 @@ export default function Navbar() {
           </svg>
         </a>
 
-        {/* Mobile burger */}
+        {/* Mobile burger — 44x44 minimum touch target */}
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden p-2 -mr-2 text-bone/90 hover:text-gold transition-colors"
-          aria-label="Abrir menu"
+          className="lg:hidden -mr-3 h-11 w-11 flex items-center justify-center text-bone/90 hover:text-gold transition-colors"
+          aria-label={open ? 'Fechar menu' : 'Abrir menu'}
           aria-expanded={open}
+          aria-controls="menu-mobile"
         >
-          <div className="w-6 flex flex-col gap-[5px]">
+          <span className="w-6 flex flex-col gap-[5px]">
             <span
               className={`block h-px w-full bg-current transition-all duration-300 ${
                 open ? 'rotate-45 translate-y-[6px]' : ''
@@ -96,33 +114,34 @@ export default function Navbar() {
                 open ? '-rotate-45 -translate-y-[6px]' : ''
               }`}
             />
-          </div>
+          </span>
         </button>
       </nav>
 
       {/* Mobile panel */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-500 ${
-          open ? 'max-h-96 border-t border-gold/15' : 'max-h-0'
+        id="menu-mobile"
+        className={`lg:hidden overflow-hidden transition-[max-height] duration-500 ${
+          open ? 'max-h-[calc(100svh-5rem)] border-t border-gold/15' : 'max-h-0'
         }`}
       >
-        <ul className="container-px py-6 flex flex-col gap-5 bg-navy-950/95 backdrop-blur-md">
+        <ul className="container-px py-4 flex flex-col bg-navy-950/95 backdrop-blur-md max-h-[calc(100svh-5rem)] overflow-y-auto">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block text-[13px] uppercase tracking-wider3 text-bone/80 hover:text-gold transition-colors"
+                className="block py-3.5 text-[13px] uppercase tracking-wider3 text-bone/85 hover:text-gold active:text-gold transition-colors"
               >
                 {l.label}
               </a>
             </li>
           ))}
-          <li>
+          <li className="pt-3 pb-2">
             <a
               href="#contato"
               onClick={() => setOpen(false)}
-              className="inline-flex items-center gap-2 mt-2 border border-gold/50 text-gold px-5 py-2.5 text-[11px] uppercase tracking-wider3"
+              className="flex items-center justify-center gap-2 border border-gold/50 text-gold px-5 py-4 text-[11px] uppercase tracking-wider3"
             >
               Falar agora
             </a>

@@ -1,16 +1,11 @@
 import Reveal from './Reveal';
-import { safeHref } from '@/lib/safe-url';
-
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5513981522764';
-const WHATSAPP_DISPLAY = process.env.NEXT_PUBLIC_WHATSAPP_DISPLAY || '(13) 98152-2764';
-const WHATSAPP_HREF = safeHref(
-  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    'Olá, Dr. Alexandre. Gostaria de tirar uma dúvida sobre o meu caso.'
-  )}`
-);
-
-const INSTAGRAM = safeHref(process.env.NEXT_PUBLIC_INSTAGRAM_URL || 'https://instagram.com/alexandre_voigt');
-const EMAIL = process.env.NEXT_PUBLIC_EMAIL || 'alexandrevoigt@adv.oabsp.org.br';
+import {
+  WHATSAPP_DISPLAY,
+  WHATSAPP_HREF,
+  INSTAGRAM,
+  EMAIL,
+  ENDERECO,
+} from '@/lib/contato';
 
 const IconWhatsApp = ({ className = '' }: { className?: string }) => (
   <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
@@ -67,11 +62,11 @@ export default function Contato() {
         <path d="M0 600 A 480 480 0 0 1 1200 600" stroke="url(#arcGrad2)" strokeWidth="0.3" />
       </svg>
 
-      <div className="container-px mx-auto max-w-6xl relative py-28 lg:py-40">
-        <div className="grid lg:grid-cols-12 gap-14 lg:gap-20 items-start">
+      <div className="container-px mx-auto max-w-6xl relative py-20 md:py-28 lg:py-40">
+        <div className="grid lg:grid-cols-12 gap-12 md:gap-14 lg:gap-20 items-start">
           {/* Left: invitation */}
           <Reveal className="lg:col-span-7">
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
               <span className="section-number">06</span>
               <span className="h-px flex-1 bg-gold/25 max-w-[180px]" />
               <span className="text-[11px] uppercase tracking-wider3 text-gold/80">
@@ -85,19 +80,19 @@ export default function Contato() {
               como passageiro?
             </h2>
 
-            <p className="mt-8 max-w-xl text-bone/75 text-[16px] leading-relaxed font-light">
+            <p className="mt-8 max-w-xl text-bone/75 text-[15px] md:text-[16px] leading-relaxed font-light">
               Entre em contato para uma orientação inicial, técnica e sem compromisso.
               O atendimento parte sempre do que diz a legislação aplicável, com a
               transparência exigida pelo Código de Ética da OAB.
             </p>
 
             {/* Primary CTA */}
-            <div className="mt-10 flex flex-wrap items-center gap-5">
+            <div className="mt-10 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-4 sm:gap-5">
               <a
                 href={WHATSAPP_HREF}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 bg-gold text-navy-950 px-7 py-4 text-[12px] uppercase tracking-wider3 font-medium btn-shine hover:bg-gold-soft transition-colors duration-500"
+                className="group inline-flex items-center justify-center gap-3 bg-gold text-navy-950 px-7 py-4 text-[12px] uppercase tracking-wider3 font-medium btn-shine hover:bg-gold-soft transition-colors duration-500"
               >
                 <IconWhatsApp className="w-4 h-4" />
                 Falar no WhatsApp
@@ -107,7 +102,7 @@ export default function Contato() {
               </a>
               <a
                 href={`mailto:${EMAIL}`}
-                className="inline-flex items-center gap-2 text-bone/85 hover:text-gold text-[12px] uppercase tracking-wider3 transition-colors duration-300 border-b border-gold/30 hover:border-gold pb-1"
+                className="inline-flex items-center justify-center gap-2 py-3 sm:py-1 text-bone/85 hover:text-gold text-[12px] uppercase tracking-wider3 transition-colors duration-300 border-b border-gold/30 hover:border-gold"
               >
                 <IconMail className="w-3.5 h-3.5" />
                 Enviar e-mail
@@ -117,7 +112,7 @@ export default function Contato() {
 
           {/* Right: contact card */}
           <Reveal className="lg:col-span-5">
-            <div className="relative border border-gold/25 bg-navy-900/60 backdrop-blur-sm p-8 md:p-10">
+            <div className="relative border border-gold/25 bg-navy-900/60 backdrop-blur-sm p-6 sm:p-8 md:p-10">
               {/* Corner accents */}
               <span className="pointer-events-none absolute -top-px -left-px w-6 h-6 border-t border-l border-gold/80" />
               <span className="pointer-events-none absolute -bottom-px -right-px w-6 h-6 border-b border-r border-gold/80" />
@@ -132,12 +127,12 @@ export default function Contato() {
                     href={WHATSAPP_HREF}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="py-4 flex items-center justify-between gap-4 w-full"
+                    className="py-4 flex items-center justify-between gap-3 sm:gap-4 w-full min-w-0"
                   >
-                    <div className="flex items-center gap-4">
-                      <IconWhatsApp className="w-5 h-5 text-gold group-hover:text-gold-soft transition-colors" />
-                      <div>
-                        <p className="text-[10px] uppercase tracking-wider3 text-bone/55">
+                    <div className="flex items-center gap-4 min-w-0">
+                      <IconWhatsApp className="w-5 h-5 text-gold group-hover:text-gold-soft transition-colors shrink-0" />
+                      <div className="min-w-0">
+                        <p className="text-[11px] uppercase tracking-wider3 text-bone/65">
                           WhatsApp
                         </p>
                         <p className="font-display text-bone text-[17px] mt-0.5 group-hover:text-gold-soft transition-colors">
@@ -146,7 +141,7 @@ export default function Contato() {
                       </div>
                     </div>
                     <span
-                      className="text-gold/80 group-hover:text-gold-soft group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
+                      className="shrink-0 text-gold/80 group-hover:text-gold-soft group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
                     >
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                         <path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="square" />
@@ -160,12 +155,12 @@ export default function Contato() {
                     href={INSTAGRAM}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="py-4 flex items-center justify-between gap-4 w-full"
+                    className="py-4 flex items-center justify-between gap-3 sm:gap-4 w-full min-w-0"
                   >
-                    <div className="flex items-center gap-4">
-                      <IconInstagram className="w-5 h-5 text-gold group-hover:text-gold-soft transition-colors" />
-                      <div>
-                        <p className="text-[10px] uppercase tracking-wider3 text-bone/55">
+                    <div className="flex items-center gap-4 min-w-0">
+                      <IconInstagram className="w-5 h-5 text-gold group-hover:text-gold-soft transition-colors shrink-0" />
+                      <div className="min-w-0">
+                        <p className="text-[11px] uppercase tracking-wider3 text-bone/65">
                           Instagram
                         </p>
                         <p className="font-display text-bone text-[17px] mt-0.5 group-hover:text-gold-soft transition-colors">
@@ -174,7 +169,7 @@ export default function Contato() {
                       </div>
                     </div>
                     <span
-                      className="text-gold/80 group-hover:text-gold-soft group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
+                      className="shrink-0 text-gold/80 group-hover:text-gold-soft group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
                     >
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                         <path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="square" />
@@ -186,21 +181,21 @@ export default function Contato() {
                 <li className="group">
                   <a
                     href={`mailto:${EMAIL}`}
-                    className="py-4 flex items-center justify-between gap-4 w-full"
+                    className="py-4 flex items-center justify-between gap-3 sm:gap-4 w-full min-w-0"
                   >
-                    <div className="flex items-center gap-4">
-                      <IconMail className="w-5 h-5 text-gold group-hover:text-gold-soft transition-colors" />
-                      <div>
-                        <p className="text-[10px] uppercase tracking-wider3 text-bone/55">
+                    <div className="flex items-center gap-4 min-w-0">
+                      <IconMail className="w-5 h-5 text-gold group-hover:text-gold-soft transition-colors shrink-0" />
+                      <div className="min-w-0">
+                        <p className="text-[11px] uppercase tracking-wider3 text-bone/65">
                           E-mail
                         </p>
-                        <p className="font-display text-bone text-[17px] mt-0.5 group-hover:text-gold-soft transition-colors">
+                        <p className="font-display text-bone text-[14px] sm:text-[15px] md:text-[16px] mt-0.5 break-all group-hover:text-gold-soft transition-colors">
                           {EMAIL}
                         </p>
                       </div>
                     </div>
                     <span
-                      className="text-gold/80 group-hover:text-gold-soft group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
+                      className="shrink-0 text-gold/80 group-hover:text-gold-soft group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
                     >
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                         <path d="M3 11L11 3M11 3H5M11 3v6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="square" />
@@ -212,15 +207,15 @@ export default function Contato() {
 
               {/* Address — taken from public book imprint; confirm with client */}
               <div className="mt-8 pt-6 border-t border-bone/10">
-                <p className="text-[10px] uppercase tracking-wider3 text-bone/55 mb-2">
+                <p className="text-[11px] uppercase tracking-wider3 text-bone/65 mb-2">
                   Atendimento
                 </p>
                 {/* TODO: confirmar endereço oficial atual */}
-                <p className="text-bone/85 text-[13.5px] leading-relaxed font-light">
-                  Av. Senador Feijó, 686 · Sala 1726
+                <address className="not-italic text-bone/85 text-[14px] leading-relaxed font-light">
+                  {ENDERECO.logradouro} · {ENDERECO.complemento}
                   <br />
-                  Santos / SP · CEP 11015-502
-                </p>
+                  {ENDERECO.cidade} / {ENDERECO.uf} · CEP {ENDERECO.cep}
+                </address>
               </div>
             </div>
           </Reveal>

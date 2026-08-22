@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen w-full overflow-hidden bg-navy-grad grain"
+      className="relative w-full overflow-hidden bg-navy-grad grain"
     >
       {/* Decorative arc — subtle aviation route line */}
       <svg
@@ -35,12 +35,12 @@ export default function Hero() {
         className="pointer-events-none absolute inset-y-0 right-[8%] w-px bg-gradient-to-b from-transparent via-gold/15 to-transparent hidden md:block"
       />
 
-      <div className="container-px mx-auto max-w-7xl relative z-10 pt-36 pb-24 lg:pt-40 lg:pb-32 min-h-screen flex items-center">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center w-full">
+      <div className="container-px mx-auto max-w-7xl relative z-10 pt-28 pb-20 md:pt-36 md:pb-24 lg:pt-40 lg:pb-32 min-h-[100svh] flex items-center">
+        <div className="grid lg:grid-cols-12 gap-14 lg:gap-16 items-center w-full">
           {/* TEXT */}
-          <div className="lg:col-span-7 order-2 lg:order-1">
+          <div className="lg:col-span-7">
             {/* Eyebrow */}
-            <div className="flex items-center gap-4 mb-10 animate-fade-in" style={{ animationDelay: '0.1s', opacity: 0 }}>
+            <div className="flex items-center gap-4 mb-8 md:mb-10 animate-fade-in" style={{ animationDelay: '0.1s', opacity: 0 }}>
               <span className="h-px w-12 bg-gold/70" />
               <span className="text-[11px] uppercase tracking-wider4 text-gold/90 font-medium">
                 Advocacia
@@ -56,11 +56,19 @@ export default function Hero() {
               <span className="block text-[clamp(2.75rem,7vw,6rem)]">
                 Voigt<span className="text-gold">.</span>
               </span>
+              {/* O H1 visual é só o nome — ninguém busca por ele sem já
+                  conhecer o escritório. Este complemento dá ao H1 o termo
+                  que as pessoas realmente pesquisam, sem alterar a arte. */}
+              <span className="sr-only">
+                {' '}
+                — Advogado especialista em Direito Militar e Policial e em
+                Direito Aeronáutico, em Santos/SP
+              </span>
             </h1>
 
             {/* Subtitle row */}
             <div
-              className="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 text-bone/80 font-sans text-[13px] md:text-sm uppercase tracking-wider2 animate-fade-up"
+              className="mt-8 md:mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 text-bone/80 font-sans text-[13px] md:text-sm uppercase tracking-wider2 animate-fade-up"
               style={{ animationDelay: '0.5s', opacity: 0 }}
             >
               <span>Advogado</span>
@@ -70,7 +78,7 @@ export default function Hero() {
 
             {/* Descriptor paragraph */}
             <p
-              className="mt-10 max-w-xl text-bone/70 text-[15px] md:text-base leading-relaxed font-light animate-fade-up"
+              className="mt-8 md:mt-10 max-w-xl text-bone/70 text-[15px] md:text-base leading-relaxed font-light animate-fade-up"
               style={{ animationDelay: '0.7s', opacity: 0 }}
             >
               Trajetória construída no serviço público, na disciplina militar e no estudo
@@ -80,12 +88,12 @@ export default function Hero() {
 
             {/* CTA */}
             <div
-              className="mt-12 flex flex-wrap items-center gap-5 animate-fade-up"
+              className="mt-10 md:mt-12 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-4 sm:gap-5 animate-fade-up"
               style={{ animationDelay: '0.9s', opacity: 0 }}
             >
               <a
                 href="#sobre"
-                className="group inline-flex items-center gap-3 bg-gold text-navy-950 px-7 py-4 text-[12px] uppercase tracking-wider3 font-medium btn-shine hover:bg-gold-soft transition-colors duration-500"
+                className="group inline-flex items-center justify-center gap-3 bg-gold text-navy-950 px-7 py-4 text-[12px] uppercase tracking-wider3 font-medium btn-shine hover:bg-gold-soft transition-colors duration-500"
               >
                 Conheça meu trabalho
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="transition-transform duration-500 group-hover:translate-y-0.5">
@@ -94,7 +102,7 @@ export default function Hero() {
               </a>
               <a
                 href="#contato"
-                className="inline-flex items-center gap-2 text-bone/80 hover:text-gold text-[12px] uppercase tracking-wider3 transition-colors duration-300 border-b border-gold/30 hover:border-gold pb-1"
+                className="inline-flex items-center justify-center gap-2 py-3 sm:py-1 text-bone/80 hover:text-gold text-[12px] uppercase tracking-wider3 transition-colors duration-300 border-b border-gold/30 hover:border-gold"
               >
                 Tirar uma dúvida
               </a>
@@ -102,7 +110,7 @@ export default function Hero() {
           </div>
 
           {/* PORTRAIT */}
-          <div className="lg:col-span-5 order-1 lg:order-2">
+          <div className="lg:col-span-5">
             <div
               className="relative mx-auto max-w-[360px] lg:max-w-none animate-fade-up"
               style={{ animationDelay: '0.4s', opacity: 0 }}
@@ -117,7 +125,7 @@ export default function Hero() {
                     src="/images/alexandre-voigt.jpeg"
                     alt="Retrato do Dr. Alexandre Voigt"
                     fill
-                    sizes="(min-width: 1024px) 40vw, 80vw"
+                    sizes="(min-width: 1024px) 40vw, 93vw"
                     className="object-cover object-[center_18%] grayscale-[12%] contrast-105"
                     priority
                   />
@@ -143,7 +151,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <div
         aria-hidden="true"
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-bone/45 animate-fade-in"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-bone/60 animate-fade-in"
         style={{ animationDelay: '1.3s', opacity: 0 }}
       >
         <span className="text-[10px] uppercase tracking-wider3">Rolar</span>

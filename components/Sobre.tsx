@@ -6,14 +6,14 @@ export default function Sobre() {
       {/* Subtle blueprint dots */}
       <div className="absolute inset-0 blueprint opacity-60 pointer-events-none" />
 
-      <div className="container-px mx-auto max-w-6xl relative py-28 lg:py-40">
+      <div className="container-px mx-auto max-w-6xl relative py-20 md:py-28 lg:py-40">
         {/* Section header */}
-        <Reveal className="grid lg:grid-cols-12 gap-10 items-end mb-16 lg:mb-24">
+        <Reveal className="grid lg:grid-cols-12 gap-10 items-end mb-12 md:mb-16 lg:mb-24">
           <div className="lg:col-span-7">
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
               <span className="section-number">01</span>
               <span className="h-px flex-1 bg-navy-900/15 max-w-[180px]" />
-              <span className="text-[11px] uppercase tracking-wider3 text-navy-900/55">
+              <span className="text-[11px] uppercase tracking-wider3 text-navy-900/70">
                 Trajetória
               </span>
             </div>
@@ -32,7 +32,7 @@ export default function Sobre() {
         </Reveal>
 
         {/* Body */}
-        <div className="grid lg:grid-cols-12 gap-14 lg:gap-20 items-start">
+        <div className="grid lg:grid-cols-12 gap-12 md:gap-14 lg:gap-20 items-start">
           <div className="lg:col-span-10 lg:col-start-2">
             <Reveal stagger className="space-y-7 text-navy-900/85 text-[15.5px] md:text-[16px] leading-[1.85] font-light">
               <p>
@@ -71,9 +71,9 @@ export default function Sobre() {
             </Reveal>
 
             {/* Credentials grid */}
-            <Reveal stagger className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 border-t border-navy-900/10 pt-10">
+            <Reveal stagger className="mt-12 md:mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 border-t border-navy-900/10 pt-10">
               <div>
-                <p className="text-[10px] uppercase tracking-wider3 text-navy-900/55 mb-2">
+                <p className="text-[11px] uppercase tracking-wider3 text-navy-900/70 mb-2">
                   Titulação
                 </p>
                 <p className="font-display text-navy-900 text-lg leading-tight">
@@ -84,7 +84,7 @@ export default function Sobre() {
                 </p>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-wider3 text-navy-900/55 mb-2">
+                <p className="text-[11px] uppercase tracking-wider3 text-navy-900/70 mb-2">
                   Carreira Pública
                 </p>
                 <p className="font-display text-navy-900 text-lg leading-tight">
@@ -93,7 +93,7 @@ export default function Sobre() {
                 <p className="text-[12.5px] text-navy-900/65 mt-1">Oficial da reserva</p>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-wider3 text-navy-900/55 mb-2">
+                <p className="text-[11px] uppercase tracking-wider3 text-navy-900/70 mb-2">
                   Justiça Militar
                 </p>
                 <p className="font-display text-navy-900 text-lg leading-tight">
@@ -104,7 +104,7 @@ export default function Sobre() {
                 </p>
               </div>
               <div>
-                <p className="text-[10px] uppercase tracking-wider3 text-navy-900/55 mb-2">
+                <p className="text-[11px] uppercase tracking-wider3 text-navy-900/70 mb-2">
                   Magistério
                 </p>
                 <p className="font-display text-navy-900 text-lg leading-tight">

@@ -99,11 +99,11 @@ export default function Formacao() {
       {/* Blueprint grid — technical, archival feel */}
       <div className="absolute inset-0 blueprint opacity-[0.35] pointer-events-none" />
 
-      <div className="container-px mx-auto max-w-7xl relative py-28 lg:py-40">
+      <div className="container-px mx-auto max-w-7xl relative py-20 md:py-28 lg:py-40">
         {/* Header */}
-        <Reveal className="grid lg:grid-cols-12 gap-10 items-end mb-20">
+        <Reveal className="grid lg:grid-cols-12 gap-10 items-end mb-14 md:mb-20">
           <div className="lg:col-span-7">
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
               <span className="section-number">02</span>
               <span className="h-px flex-1 bg-gold/25 max-w-[180px]" />
               <span className="text-[11px] uppercase tracking-wider3 text-gold/80">
@@ -125,7 +125,7 @@ export default function Formacao() {
         </Reveal>
 
         {/* Timeline + institutional */}
-        <div className="grid lg:grid-cols-12 gap-14 lg:gap-20">
+        <div className="grid lg:grid-cols-12 gap-12 md:gap-14 lg:gap-20">
           <div className="lg:col-span-7">
             <Reveal stagger className="relative">
               {/* Vertical rule */}
@@ -148,7 +148,7 @@ export default function Formacao() {
                       <span className="text-[10.5px] uppercase tracking-wider3 text-gold/85">
                         {t.periodo}
                       </span>
-                      <span className="text-[10.5px] uppercase tracking-wider2 text-bone/45">
+                      <span className="text-[11px] uppercase tracking-wider2 text-bone/60">
                         {t.grau}
                       </span>
                     </div>
@@ -159,7 +159,7 @@ export default function Formacao() {
                       {t.instituicao}
                     </p>
                     {t.detalhe && (
-                      <p className="text-[12.5px] text-bone/45 font-light mt-1.5 leading-relaxed">
+                      <p className="text-[12.5px] text-bone/60 font-light mt-1.5 leading-relaxed">
                         {t.detalhe}
                       </p>
                     )}
@@ -172,13 +172,13 @@ export default function Formacao() {
           {/* Institutional / teaching */}
           <div className="lg:col-span-5">
             <Reveal stagger className="lg:sticky lg:top-28">
-              <p className="text-[10px] uppercase tracking-wider3 text-gold/80 mb-7">
+              <p className="text-[11px] uppercase tracking-wider3 text-gold/80 mb-7">
                 Atuação institucional e magistério
               </p>
               <ul className="space-y-8 border-l border-bone/10 pl-7">
                 {institucional.map((item) => (
                   <li key={item.title}>
-                    <p className="text-[10px] uppercase tracking-wider2 text-bone/40 mb-1.5">
+                    <p className="text-[11px] uppercase tracking-wider2 text-bone/60 mb-1.5">
                       {item.label}
                     </p>
                     <h3 className="font-display text-bone text-[1.15rem] leading-snug">
@@ -198,7 +198,7 @@ export default function Formacao() {
         <Reveal className="mt-20">
           <div className="rule-gold mb-10" />
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
-            <p className="text-[12.5px] text-bone/55 leading-relaxed font-light max-w-xl">
+            <p className="text-[12.5px] text-bone/65 leading-relaxed font-light max-w-xl">
               Currículo acadêmico completo, com titulação, funções exercidas e produção
               científica, publicado na Plataforma Lattes do CNPq — fonte oficial e
               verificável.
@@ -207,7 +207,7 @@ export default function Formacao() {
               href={LATTES_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center gap-3 border border-gold/50 text-gold hover:text-navy-950 hover:bg-gold/90 transition-colors duration-500 px-6 py-3 text-[11px] uppercase tracking-wider3 btn-shine"
+              className="inline-flex shrink-0 items-center justify-center gap-3 border border-gold/50 text-gold hover:text-navy-950 hover:bg-gold/90 transition-colors duration-500 px-6 py-3 text-[11px] uppercase tracking-wider3 btn-shine"
             >
               <span>Currículo Lattes</span>
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">

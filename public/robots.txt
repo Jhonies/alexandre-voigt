@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://alexandrevoigt.adv.br/sitemap.xml

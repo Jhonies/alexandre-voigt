@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Reveal from './Reveal';
 import { safeHref } from '@/lib/safe-url';
+import { SITE_URL } from '@/lib/site';
 
 type Livro = {
   cover: string;
@@ -45,23 +46,49 @@ const livros: Livro[] = [
   },
 ];
 
+// As obras são o principal sinal de autoridade do autor (E-E-A-T). Sem
+// marcação elas são texto invisível para o Google; como `Book` conectado ao
+// `@id` da pessoa, reforçam a entidade e habilitam rich results.
+const livrosJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Obras publicadas por Alexandre Voigt',
+  itemListElement: livros.map((l, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'Book',
+      name: l.subtitle ? `${l.title} — ${l.subtitle}` : l.title,
+      description: l.description,
+      image: `${SITE_URL}${l.cover}`,
+      inLanguage: 'pt-BR',
+      author: { '@id': `${SITE_URL}/#pessoa` },
+      ...(l.link !== '#' ? { url: l.link } : {}),
+    },
+  })),
+};
+
 export default function Livros() {
   return (
     <section
       id="livros"
       className="relative bg-bone text-navy-900 overflow-hidden"
     >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(livrosJsonLd) }}
+      />
       {/* Decorative paper texture suggestion */}
       <div className="absolute inset-0 blueprint opacity-50 pointer-events-none" />
 
-      <div className="container-px mx-auto max-w-7xl relative py-28 lg:py-40">
+      <div className="container-px mx-auto max-w-7xl relative py-20 md:py-28 lg:py-40">
         {/* Header */}
-        <Reveal className="grid lg:grid-cols-12 gap-10 items-end mb-20">
+        <Reveal className="grid lg:grid-cols-12 gap-10 items-end mb-14 md:mb-20">
           <div className="lg:col-span-7">
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
               <span className="section-number">04</span>
               <span className="h-px flex-1 bg-navy-900/15 max-w-[180px]" />
-              <span className="text-[11px] uppercase tracking-wider3 text-navy-900/55">
+              <span className="text-[11px] uppercase tracking-wider3 text-navy-900/70">
                 Obras Publicadas
               </span>
             </div>
@@ -79,7 +106,7 @@ export default function Livros() {
         </Reveal>
 
         {/* Grid */}
-        <Reveal stagger className="grid md:grid-cols-3 gap-10 lg:gap-14">
+        <Reveal stagger className="grid sm:grid-cols-2 md:grid-cols-3 gap-12 sm:gap-8 md:gap-10 lg:gap-14">
           {livros.map((l, i) => (
             <article
               key={l.title}
@@ -154,7 +181,7 @@ export default function Livros() {
                   href={l.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group/btn mt-7 inline-flex items-center gap-3 text-[11px] uppercase tracking-wider3 text-navy-900 hover:text-gold-deep transition-colors duration-300"
+                  className="group/btn mt-6 inline-flex items-center gap-3 py-2 text-[11px] uppercase tracking-wider3 text-navy-900 hover:text-gold-deep transition-colors duration-300"
                 >
                   <span className="border-b border-navy-900/40 group-hover/btn:border-gold-deep transition-colors duration-300 pb-1">
                     {l.ctaLabel}
@@ -171,7 +198,7 @@ export default function Livros() {
         {/* Footnote */}
         <Reveal className="mt-16 flex items-start gap-3 max-w-3xl">
           <span className="mt-2 h-px w-8 bg-gold-deep/60 shrink-0" />
-          <p className="text-[12.5px] text-navy-900/55 leading-relaxed font-light">
+          <p className="text-[12.5px] text-navy-900/70 leading-relaxed font-light">
             Obras autorais publicadas em plataforma editorial independente. Divulgação
             cultural e científica, em conformidade com o Código de Ética e Disciplina da OAB.
           </p>

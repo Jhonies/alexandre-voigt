@@ -30,7 +30,7 @@ const depoimentos = [
 const QuoteMark = () => (
   <span
     className="font-display text-gold-deep leading-none select-none"
-    style={{ fontSize: '5rem', fontStyle: 'italic' }}
+    style={{ fontSize: '3.5rem', fontStyle: 'italic' }}
     aria-hidden="true"
   >
     “
@@ -49,11 +49,11 @@ export default function Depoimentos() {
         className="pointer-events-none absolute inset-y-0 left-1/2 -translate-x-1/2 w-px bg-gradient-to-b from-transparent via-gold/15 to-transparent"
       />
 
-      <div className="container-px mx-auto max-w-7xl relative py-28 lg:py-40">
+      <div className="container-px mx-auto max-w-7xl relative py-20 md:py-28 lg:py-40">
         {/* Header */}
-        <Reveal className="grid lg:grid-cols-12 gap-10 items-end mb-20">
+        <Reveal className="grid lg:grid-cols-12 gap-10 items-end mb-14 md:mb-20">
           <div className="lg:col-span-7">
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
               <span className="section-number">05</span>
               <span className="h-px flex-1 bg-gold/25 max-w-[180px]" />
               <span className="text-[11px] uppercase tracking-wider3 text-gold/80">
@@ -78,11 +78,11 @@ export default function Depoimentos() {
           {depoimentos.map((d, i) => (
             <figure
               key={i}
-              className="relative bg-navy-900 p-9 md:p-11 card-lift flex flex-col"
+              className="relative bg-navy-900 p-6 sm:p-9 md:p-11 card-lift flex flex-col"
             >
               <QuoteMark />
 
-              <blockquote className="-mt-6 text-bone/85 text-[16px] leading-[1.85] font-light font-display italic">
+              <blockquote className="-mt-4 text-bone/85 text-[15.5px] md:text-[16px] leading-[1.85] font-light font-display italic">
                 {d.quote}
               </blockquote>
 
@@ -101,7 +101,7 @@ export default function Depoimentos() {
         {/* OAB compliance footnote */}
         <Reveal className="mt-12 max-w-3xl flex items-start gap-3">
           <span className="mt-2 h-px w-8 bg-gold/40 shrink-0" />
-          <p className="text-[12px] text-bone/55 leading-relaxed font-light">
+          <p className="text-[12.5px] text-bone/65 leading-relaxed font-light">
             Depoimentos publicados sem menção a casos concretos, resultados obtidos ou
             valores envolvidos, em conformidade com o Provimento OAB nº 205/2021 e o
             Código de Ética e Disciplina da OAB.

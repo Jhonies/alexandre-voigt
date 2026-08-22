@@ -8,6 +8,7 @@ import Livros from '@/components/Livros';
 import Depoimentos from '@/components/Depoimentos';
 import Contato from '@/components/Contato';
 import Footer from '@/components/Footer';
+import WhatsAppFlutuante from '@/components/WhatsAppFlutuante';
 
 export default function Page() {
   return (
@@ -22,6 +23,7 @@ export default function Page() {
       <Depoimentos />
       <Contato />
       <Footer />
+      <WhatsAppFlutuante />
     </main>
   );
 }

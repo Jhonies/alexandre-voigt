@@ -135,11 +135,11 @@ export default function Atuacoes() {
         <circle cx="320" cy="320" r="220" stroke="#C9A84C" strokeWidth="0.4" />
       </svg>
 
-      <div className="container-px mx-auto max-w-7xl relative py-28 lg:py-40">
+      <div className="container-px mx-auto max-w-7xl relative py-20 md:py-28 lg:py-40">
         {/* Header */}
-        <Reveal className="grid lg:grid-cols-12 gap-10 items-end mb-20">
+        <Reveal className="grid lg:grid-cols-12 gap-10 items-end mb-14 md:mb-20">
           <div className="lg:col-span-7">
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
               <span className="section-number">03</span>
               <span className="h-px flex-1 bg-gold/25 max-w-[180px]" />
               <span className="text-[11px] uppercase tracking-wider3 text-gold/80">
@@ -167,17 +167,17 @@ export default function Atuacoes() {
             return (
               <article
                 key={title}
-                className="group relative bg-navy-900 p-9 md:p-12 card-lift"
+                className="group relative bg-navy-900 p-6 sm:p-9 md:p-12 card-lift"
               >
                 {/* Card index */}
-                <div className="flex items-start justify-between mb-8">
+                <div className="flex items-start justify-between mb-6 md:mb-8">
                   <span className="font-display italic text-gold/70 text-sm">
                     /{String(i + 1).padStart(2, '0')}
                   </span>
-                  <Icon className="w-12 h-12 text-gold/85 transition-transform duration-700 group-hover:rotate-[3deg] group-hover:scale-105" />
+                  <Icon className="w-10 h-10 md:w-12 md:h-12 shrink-0 text-gold/85 transition-transform duration-700 group-hover:rotate-[3deg] group-hover:scale-105" />
                 </div>
 
-                <h3 className="font-display text-bone text-[1.65rem] md:text-[1.85rem] leading-tight mb-5">
+                <h3 className="font-display text-bone text-[1.5rem] sm:text-[1.65rem] md:text-[1.85rem] leading-tight mb-4 md:mb-5">
                   {title}
                 </h3>
 
@@ -203,7 +203,7 @@ export default function Atuacoes() {
         {/* Disclaimer footnote */}
         <Reveal className="mt-12 flex items-start gap-3 max-w-3xl">
           <span className="mt-2 h-px w-8 bg-gold/40 shrink-0" />
-          <p className="text-[12.5px] text-bone/55 leading-relaxed font-light">
+          <p className="text-[12.5px] text-bone/65 leading-relaxed font-light">
             Conteúdo de caráter informativo, em conformidade com o Provimento OAB nº 205/2021
             e o Código de Ética e Disciplina da OAB. Não constitui promessa de resultado
             nem captação de clientela.

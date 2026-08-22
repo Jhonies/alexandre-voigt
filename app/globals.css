@@ -15,6 +15,15 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Safety net: decorative SVGs and long strings must never scroll the page
+     sideways on narrow screens. `clip` (not `hidden`) keeps position: sticky
+     working inside the page. */
+  overflow-x: clip;
+}
+
+/* Fixed 80px header — anchor targets must clear it when jumping via #hash. */
+section[id] {
+  scroll-margin-top: 5.5rem;
 }
 
 body {
@@ -96,17 +105,19 @@ body {
   overflow: hidden;
   isolation: isolate;
 }
-.btn-shine::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, transparent 30%, rgba(245, 241, 232, 0.18) 50%, transparent 70%);
-  transform: translateX(-120%);
-  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-  z-index: -1;
-}
-.btn-shine:hover::after {
-  transform: translateX(120%);
+@media (hover: hover) and (pointer: fine) {
+  .btn-shine::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(245, 241, 232, 0.18) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: -1;
+  }
+  .btn-shine:hover::after {
+    transform: translateX(120%);
+  }
 }
 
 /* Section number plates */
@@ -151,31 +162,71 @@ body {
   border-top: none;
 }
 
-/* Hover lift for cards */
-.card-lift {
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+/* Hover lift for cards — pointer devices only. On touch, :hover sticks
+   after a tap and leaves cards stuck in the raised state. */
+@media (hover: hover) and (pointer: fine) {
+  .card-lift {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .card-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(201, 168, 76, 0.45);
+  }
 }
-.card-lift:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6),
-              0 0 0 1px rgba(201, 168, 76, 0.45);
+
+/* Touch equivalent — a brief press state instead of a persistent lift. */
+@media (hover: none) {
+  .card-lift {
+    transition: background-color 0.2s ease;
+  }
+  .card-lift:active {
+    background-color: rgba(201, 168, 76, 0.06);
+  }
 }
 
 /* Book hover */
 .book-cover {
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.8s ease;
   filter: brightness(0.95);
 }
-.book-cover:hover {
-  transform: translateY(-10px) rotateZ(-0.4deg);
-  filter: brightness(1.05) drop-shadow(0 30px 40px rgba(201, 168, 76, 0.18));
+@media (hover: hover) and (pointer: fine) {
+  .book-cover {
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                filter 0.8s ease;
+  }
+  .book-cover:hover {
+    transform: translateY(-10px) rotateZ(-0.4deg);
+    filter: brightness(1.05) drop-shadow(0 30px 40px rgba(201, 168, 76, 0.18));
+  }
 }
 
 /* Tracking utilities for serif italic numbers */
 .serif-italic {
   font-family: var(--font-display), Georgia, serif;
   font-style: italic;
+}
+
+/* Respect the OS-level motion preference. Reveal blocks start at opacity 0,
+   so they must be forced visible here — never just disable the transition. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
