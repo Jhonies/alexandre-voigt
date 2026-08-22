@@ -54,7 +54,7 @@ export default function Depoimentos() {
         <Reveal className="grid lg:grid-cols-12 gap-10 items-end mb-20">
           <div className="lg:col-span-7">
             <div className="flex items-center gap-4 mb-6">
-              <span className="section-number">04</span>
+              <span className="section-number">05</span>
               <span className="h-px flex-1 bg-gold/25 max-w-[180px]" />
               <span className="text-[11px] uppercase tracking-wider3 text-gold/80">
                 Depoimentos

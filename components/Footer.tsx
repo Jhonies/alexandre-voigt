@@ -27,6 +27,7 @@ export default function Footer() {
             </p>
             <ul className="space-y-2.5 text-[13px]">
               <li><a href="#sobre" className="hover:text-gold transition-colors">Trajetória</a></li>
+              <li><a href="#formacao" className="hover:text-gold transition-colors">Formação e titulação</a></li>
               <li><a href="#atuacao" className="hover:text-gold transition-colors">Áreas de atuação</a></li>
               <li><a href="#livros" className="hover:text-gold transition-colors">Obras publicadas</a></li>
               <li><a href="#depoimentos" className="hover:text-gold transition-colors">Depoimentos</a></li>
@@ -46,6 +47,26 @@ export default function Footer() {
             <p className="text-[13px] mt-1">
               Advogado · OAB/SP nº&nbsp;548.991
             </p>
+            <a
+              href="http://lattes.cnpq.br/7928155562071787"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-4 text-[12.5px] text-gold/85 hover:text-gold transition-colors"
+            >
+              <span className="border-b border-gold/30 pb-px">
+                Currículo Lattes — CNPq
+              </span>
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path
+                  d="M4 8l4-4M4.5 4H8v3.5"
+                  stroke="currentColor"
+                  strokeWidth="1.4"
+                  strokeLinecap="square"
+                />
+              </svg>
+              <span className="sr-only">(abre em nova aba)</span>
+            </a>
+
             <p className="text-[12px] mt-4 leading-relaxed font-light">
               Conteúdo deste site em conformidade com o Estatuto da Advocacia
               (Lei 8.906/94), o Provimento OAB nº&nbsp;205/2021 e o Código de

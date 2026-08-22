@@ -72,7 +72,7 @@ export default function Contato() {
           {/* Left: invitation */}
           <Reveal className="lg:col-span-7">
             <div className="flex items-center gap-4 mb-6">
-              <span className="section-number">05</span>
+              <span className="section-number">06</span>
               <span className="h-px flex-1 bg-gold/25 max-w-[180px]" />
               <span className="text-[11px] uppercase tracking-wider3 text-gold/80">
                 Contato

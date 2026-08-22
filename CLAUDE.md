@@ -22,6 +22,7 @@ O projeto está organizado com a seguinte estrutura de arquivos:
   - `Navbar.tsx`: Menu de navegação responsivo no topo, com links âncora elegantes.
   - `Hero.tsx`: Seção principal e cartão de visitas, com apelo visual de alta qualidade para Direito Aeronáutico.
   - `Sobre.tsx`: Perfil do Dr. Alexandre Voigt detalhando sua jornada jurídica e militar.
+  - `Formacao.tsx`: Timeline de formação acadêmica (1998–atual), bloco de atuação institucional/magistério e link para o Currículo Lattes (CNPq). Dados extraídos do Lattes ID 7928155562071787.
   - `Atuacoes.tsx`: Grid interativo que expõe as principais áreas jurídicas e de consultoria tratadas no escritório.
   - `Livros.tsx`: Apresentação em formato de estante/grid com as capas de livros publicados pelo autor.
   - `Depoimentos.tsx`: Seção contendo as avaliações e opiniões dos clientes atendidos.

@@ -59,7 +59,7 @@ export default function Livros() {
         <Reveal className="grid lg:grid-cols-12 gap-10 items-end mb-20">
           <div className="lg:col-span-7">
             <div className="flex items-center gap-4 mb-6">
-              <span className="section-number">03</span>
+              <span className="section-number">04</span>
               <span className="h-px flex-1 bg-navy-900/15 max-w-[180px]" />
               <span className="text-[11px] uppercase tracking-wider3 text-navy-900/55">
                 Obras Publicadas

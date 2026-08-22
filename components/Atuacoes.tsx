@@ -61,13 +61,32 @@ const IconBag = ({ className = '' }: IconProps) => (
   </svg>
 );
 
+// Aircraft in flight — Direito Aeronáutico
+const IconAircraft = ({ className = '' }: IconProps) => (
+  <svg viewBox="0 0 48 48" fill="none" className={className} aria-hidden="true">
+    <path
+      d="M24 4c2 0 3 4 3 12l14 9v4l-14-4v9l5 4v3l-8-2-8 2v-3l5-4v-9l-14 4v-4l14-9c0-8 1-12 3-12z"
+      stroke="currentColor"
+      strokeWidth="1"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 const cards = [
   {
     Icon: IconMilitaryShield,
-    title: 'Advocacia Penal Militar',
+    title: 'Direito Militar e Policial',
     body:
-      'Atuação técnica em processos da Justiça Militar — defesa em inquéritos policiais militares, conselhos de justificação e procedimentos administrativos disciplinares envolvendo praças e oficiais.',
+      'Atuação técnica em processos da Justiça Militar — defesa em inquéritos policiais militares, conselhos de justificação e de disciplina e procedimentos administrativos disciplinares envolvendo praças e oficiais. Área respaldada por mestrado em Ciências Policiais, pós-graduação em Direito Militar e docência na PM/SP.',
     ref: 'CPM · CPPM · Lei nº 13.491/17',
+  },
+  {
+    Icon: IconAircraft,
+    title: 'Direito Aeronáutico',
+    body:
+      'Orientação informativa sobre os direitos do passageiro aéreo em casos de atraso, cancelamento, preterição de embarque e extravio de bagagem, nos voos domésticos e internacionais.',
+    ref: 'Resolução ANAC nº 400 · Convenção de Montreal',
   },
   {
     Icon: IconScales,
@@ -121,14 +140,14 @@ export default function Atuacoes() {
         <Reveal className="grid lg:grid-cols-12 gap-10 items-end mb-20">
           <div className="lg:col-span-7">
             <div className="flex items-center gap-4 mb-6">
-              <span className="section-number">02</span>
+              <span className="section-number">03</span>
               <span className="h-px flex-1 bg-gold/25 max-w-[180px]" />
               <span className="text-[11px] uppercase tracking-wider3 text-gold/80">
                 Áreas de Atuação
               </span>
             </div>
             <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.05]">
-              Cinco frentes de{' '}
+              Seis frentes de{' '}
               <span className="serif-italic text-gold">atuação jurídica</span>{' '}
               em que o escritório dedica seu trabalho.
             </h2>
@@ -142,16 +161,13 @@ export default function Atuacoes() {
           </div>
         </Reveal>
 
-        {/* Cards grid — 5 cards: last one spans full width on sm+ to balance the layout */}
+        {/* Cards grid — 6 cards in a balanced 2-column arrangement */}
         <Reveal stagger className="grid sm:grid-cols-2 gap-px bg-gold/15 border border-gold/15">
           {cards.map(({ Icon, title, body, ref }, i) => {
-            const isLast = i === cards.length - 1;
             return (
               <article
                 key={title}
-                className={`group relative bg-navy-900 p-9 md:p-12 card-lift ${
-                  isLast ? 'sm:col-span-2' : ''
-                }`}
+                className="group relative bg-navy-900 p-9 md:p-12 card-lift"
               >
                 {/* Card index */}
                 <div className="flex items-start justify-between mb-8">

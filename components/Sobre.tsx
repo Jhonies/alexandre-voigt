@@ -24,8 +24,9 @@ export default function Sobre() {
           </div>
           <div className="lg:col-span-5 lg:pl-8">
             <p className="text-navy-900/75 text-base leading-relaxed font-light">
-              Uma trajetória construída sobre disciplina, ética profissional e um interesse
-              técnico crescente pela legislação aplicada ao setor aéreo brasileiro.
+              Uma trajetória construída sobre disciplina, formação acadêmica continuada e
+              o estudo técnico do Direito Militar e da legislação aplicada ao setor aéreo
+              brasileiro.
             </p>
           </div>
         </Reveal>
@@ -37,9 +38,10 @@ export default function Sobre() {
               <p>
                 <span className="font-display italic text-gold-deep text-xl mr-1">F</span>
                 ormado em Direito e regularmente inscrito na Ordem dos Advogados do Brasil,
-                Dr. Alexandre Voigt dedica-se ao estudo técnico da legislação aeronáutica
-                e dos direitos previstos ao passageiro nas relações de transporte aéreo
-                doméstico e internacional.
+                Dr. Alexandre Voigt reúne formação jurídica e quase três décadas de
+                serviço na segurança pública — combinação que orienta sua atuação em
+                duas frentes principais: o <strong className="font-medium text-navy-900">Direito Militar
+                e Policial</strong> e o Direito Aeronáutico do consumidor.
               </p>
               <p>
                 A trajetória como <strong className="font-medium text-navy-900">Tenente-coronel da Polícia Militar</strong>{' '}
@@ -48,11 +50,18 @@ export default function Sobre() {
                 trato dos processos e a postura de servidor público diante do cidadão.
               </p>
               <p>
-                Atua de forma informativa, esclarecendo aos passageiros os direitos
+                Mestre em Ciências Policiais de Segurança e Ordem Pública pelo Centro de
+                Altos Estudos de Segurança da PM/SP, é membro da Comissão de Direito
+                Militar da OAB/Santos e professor de Direito Constitucional, Direito Penal
+                Militar e Criminologia na Escola Superior de Soldados da Polícia Militar
+                de São Paulo.
+              </p>
+              <p>
+                Em paralelo, dedica-se ao estudo dos direitos do passageiro aéreo,
                 previstos na Resolução nº 400 da ANAC, no Código de Defesa do Consumidor
-                e nas convenções internacionais aplicáveis ao transporte aéreo, sempre
-                em conformidade com o Estatuto da Advocacia e o Código de Ética e
-                Disciplina da OAB.
+                e nas convenções internacionais aplicáveis ao transporte aéreo, sempre em
+                conformidade com o Estatuto da Advocacia e o Código de Ética e Disciplina
+                da OAB.
               </p>
               <p>
                 É autor de obras voltadas a temas sensíveis do Direito e da segurança
@@ -62,15 +71,17 @@ export default function Sobre() {
             </Reveal>
 
             {/* Credentials grid */}
-            <Reveal stagger className="mt-14 grid sm:grid-cols-3 gap-x-6 gap-y-8 border-t border-navy-900/10 pt-10">
+            <Reveal stagger className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 border-t border-navy-900/10 pt-10">
               <div>
                 <p className="text-[10px] uppercase tracking-wider3 text-navy-900/55 mb-2">
-                  Formação
+                  Titulação
                 </p>
                 <p className="font-display text-navy-900 text-lg leading-tight">
-                  Bacharel em Direito
+                  Mestre em Ciências Policiais
                 </p>
-                <p className="text-[12.5px] text-navy-900/65 mt-1">Inscrito na OAB/SP</p>
+                <p className="text-[12.5px] text-navy-900/65 mt-1">
+                  CAES · Advogado inscrito na OAB/SP
+                </p>
               </div>
               <div>
                 <p className="text-[10px] uppercase tracking-wider3 text-navy-900/55 mb-2">
@@ -79,16 +90,29 @@ export default function Sobre() {
                 <p className="font-display text-navy-900 text-lg leading-tight">
                   Tenente-coronel da PM/SP
                 </p>
-                <p className="text-[12.5px] text-navy-900/65 mt-1">Oficial reformado · reserva</p>
+                <p className="text-[12.5px] text-navy-900/65 mt-1">Oficial da reserva</p>
               </div>
               <div>
                 <p className="text-[10px] uppercase tracking-wider3 text-navy-900/55 mb-2">
-                  Estudo Técnico
+                  Justiça Militar
                 </p>
                 <p className="font-display text-navy-900 text-lg leading-tight">
-                  Direito Aeronáutico
+                  Juiz Militar — TJM/SP
                 </p>
-                <p className="text-[12.5px] text-navy-900/65 mt-1">Resolução ANAC nº 400</p>
+                <p className="text-[12.5px] text-navy-900/65 mt-1">
+                  Conselhos Permanente e Especial
+                </p>
+              </div>
+              <div>
+                <p className="text-[10px] uppercase tracking-wider3 text-navy-900/55 mb-2">
+                  Magistério
+                </p>
+                <p className="font-display text-navy-900 text-lg leading-tight">
+                  Professor de Direito
+                </p>
+                <p className="text-[12.5px] text-navy-900/65 mt-1">
+                  Escola Superior de Soldados PM/SP
+                </p>
               </div>
             </Reveal>
           </div>
