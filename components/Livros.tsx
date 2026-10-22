@@ -9,8 +9,10 @@ type Livro = {
   title: string;
   subtitle?: string;
   description: string;
-  link: string;
-  ctaLabel: string;
+  /** Só obras de acesso livre têm link. A venda (Hotmart) não é divulgada
+   *  junto com a advocacia (CED, art. 40, IV). */
+  link?: string;
+  ctaLabel?: string;
 };
 
 const livros: Livro[] = [
@@ -20,9 +22,7 @@ const livros: Livro[] = [
     title: 'A Sociedade do Medo',
     subtitle: 'A justiça que solta, o crime que retorna',
     description:
-      'Reflexão crítica sobre segurança pública, percepção social do crime e os limites da resposta do Estado, escrita a partir da vivência de três décadas no serviço policial militar.',
-    link: safeHref('https://alexandrevoigt.hotmart.host/a-sociedade-do-medo-a-justica-que-solta-o-crime-que-retorna-4fddb600-38f4-4b18-a7a4-5d6b6f33f715'),
-    ctaLabel: 'Adquirir no Hotmart',
+      'Reflexão crítica sobre segurança pública, percepção social do crime, reincidência e os limites da resposta do Estado.',
   },
   {
     cover: '/images/parem-de-matar-nossas-rainhas.jpeg',
@@ -31,8 +31,6 @@ const livros: Livro[] = [
     subtitle: 'Feminicídio — uma violência imperdoável',
     description:
       'Obra coautoral dedicada ao enfrentamento do feminicídio no Brasil, com análise da legislação, dos mecanismos de proteção e das responsabilidades sociais envolvidas.',
-    link: safeHref('https://go.hotmart.com/N103531012W'),
-    ctaLabel: 'Adquirir no Hotmart',
   },
   {
     cover: '/images/assedio.jpeg',
@@ -63,7 +61,7 @@ const livrosJsonLd = {
       image: `${SITE_URL}${l.cover}`,
       inLanguage: 'pt-BR',
       author: { '@id': `${SITE_URL}/#pessoa` },
-      ...(l.link !== '#' ? { url: l.link } : {}),
+      ...(l.link && l.link !== '#' ? { url: l.link } : {}),
     },
   })),
 };
@@ -100,7 +98,7 @@ export default function Livros() {
           <div className="lg:col-span-5 lg:pl-8">
             <p className="text-navy-900/70 text-base leading-relaxed font-light">
               Conhecimento técnico e reflexão sobre Direito, segurança pública e cidadania
-              — disponíveis ao público geral em formato digital.
+              — produção intelectual do autor.
             </p>
           </div>
         </Reveal>
@@ -120,6 +118,7 @@ export default function Livros() {
                   {String(i + 1).padStart(2, '0')}
                 </div>
 
+                {l.link ? (
                 <a
                   href={l.link}
                   target="_blank"
@@ -158,6 +157,17 @@ export default function Livros() {
                     </svg>
                   </span>
                 </a>
+                ) : (
+                  <div className="relative block aspect-[2/3] w-full overflow-hidden border border-navy-900/10 bg-navy-900 shadow-[0_25px_45px_-25px_rgba(10,22,40,0.45)]">
+                    <Image
+                      src={l.cover}
+                      alt={l.alt}
+                      fill
+                      sizes="(min-width: 768px) 30vw, 90vw"
+                      className="object-cover book-cover"
+                    />
+                  </div>
+                )}
               </div>
 
               {/* Meta */}
@@ -177,6 +187,7 @@ export default function Livros() {
                   {l.description}
                 </p>
 
+                {l.link && l.ctaLabel ? (
                 <a
                   href={l.link}
                   target="_blank"
@@ -190,19 +201,12 @@ export default function Livros() {
                     <path d="M0 5h12M8 1l4 4-4 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="square" />
                   </svg>
                 </a>
+                ) : null}
               </div>
             </article>
           ))}
         </Reveal>
 
-        {/* Footnote */}
-        <Reveal className="mt-16 flex items-start gap-3 max-w-3xl">
-          <span className="mt-2 h-px w-8 bg-gold-deep/60 shrink-0" />
-          <p className="text-[12.5px] text-navy-900/70 leading-relaxed font-light">
-            Obras autorais publicadas em plataforma editorial independente. Divulgação
-            cultural e científica, em conformidade com o Código de Ética e Disciplina da OAB.
-          </p>
-        </Reveal>
       </div>
     </section>
   );

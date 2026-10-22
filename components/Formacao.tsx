@@ -68,28 +68,10 @@ const institucional = [
     body: 'Membro da Comissão de Direito Militar da OAB — Subseção de Santos.',
   },
   {
-    label: 'Justiça Militar Estadual',
-    title: 'Juiz Militar — TJM/SP',
-    body:
-      'Funções exercidas no Conselho Permanente da 4ª Auditoria (4º trimestre de 2015, 1º trimestre de 2017 e 1º trimestre de 2019). Atualmente Juiz Suplente do Conselho Especial da 3ª Auditoria.',
-  },
-  {
-    label: 'Magistério',
-    title: 'Professor — Escola Superior de Soldados PM/SP',
-    body:
-      'Direito Constitucional, Direitos Humanos, Direito Penal Militar, Direito Administrativo e Criminologia, no Comando de Policiamento do Interior-6, em Santos/SP.',
-  },
-  {
     label: 'Pesquisa',
     title: 'Orientação de mestrado — CAES',
     body:
       'Orientador de dissertação no Curso de Aperfeiçoamento de Oficiais do Centro de Altos Estudos de Segurança da PM/SP.',
-  },
-  {
-    label: 'Polícia Judiciária Militar',
-    title: 'Chefia da Seção de Justiça e Disciplina',
-    body:
-      'Chefe da Seção de Polícia Judiciária Militar e Disciplinar do 6º BPM/I, do 45º BPM/I e do 39º BPM/I, entre 2006 e 2015.',
   },
 ];
 
@@ -111,15 +93,14 @@ export default function Formacao() {
               </span>
             </div>
             <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.05]">
-              Quase três décadas de{' '}
-              <span className="serif-italic text-gold">formação continuada</span>{' '}
+              <span className="serif-italic text-gold">Formação continuada</span>{' '}
               em Direito e segurança pública.
             </h2>
           </div>
           <div className="lg:col-span-5 lg:pl-8">
             <p className="text-bone/70 text-base leading-relaxed font-light">
-              Titulação acadêmica, funções institucionais e atividade docente registradas
-              e verificáveis na Plataforma Lattes do CNPq.
+              Titulação acadêmica e atuação institucional registradas e verificáveis na
+              Plataforma Lattes do CNPq.
             </p>
           </div>
         </Reveal>
@@ -173,7 +154,7 @@ export default function Formacao() {
           <div className="lg:col-span-5">
             <Reveal stagger className="lg:sticky lg:top-28">
               <p className="text-[11px] uppercase tracking-wider3 text-gold/80 mb-7">
-                Atuação institucional e magistério
+                Atuação institucional e acadêmica
               </p>
               <ul className="space-y-8 border-l border-bone/10 pl-7">
                 {institucional.map((item) => (
@@ -199,8 +180,7 @@ export default function Formacao() {
           <div className="rule-gold mb-10" />
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
             <p className="text-[12.5px] text-bone/65 leading-relaxed font-light max-w-xl">
-              Currículo acadêmico completo, com titulação, funções exercidas e produção
-              científica, publicado na Plataforma Lattes do CNPq — fonte oficial e
+              Currículo acadêmico completo, com titulação e produção científica, publicado na Plataforma Lattes do CNPq — fonte oficial e
               verificável.
             </p>
             <a

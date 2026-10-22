@@ -30,7 +30,6 @@ export default function Footer() {
               <li><a href="#formacao" className="block py-2 hover:text-gold transition-colors">Formação e titulação</a></li>
               <li><a href="#atuacao" className="block py-2 hover:text-gold transition-colors">Áreas de atuação</a></li>
               <li><a href="#livros" className="block py-2 hover:text-gold transition-colors">Obras publicadas</a></li>
-              <li><a href="#depoimentos" className="block py-2 hover:text-gold transition-colors">Depoimentos</a></li>
               <li><a href="#contato" className="block py-2 hover:text-gold transition-colors">Contato</a></li>
             </ul>
           </nav>

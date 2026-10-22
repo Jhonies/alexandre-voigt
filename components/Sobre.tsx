@@ -18,14 +18,12 @@ export default function Sobre() {
               </span>
             </div>
             <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.05] text-navy-900">
-              Três décadas entre o <span className="serif-italic text-gold-deep">serviço público</span>{' '}
-              e o estudo do Direito.
+              Formação e <span className="serif-italic text-gold-deep">trajetória</span>.
             </h2>
           </div>
           <div className="lg:col-span-5 lg:pl-8">
             <p className="text-navy-900/75 text-base leading-relaxed font-light">
-              Uma trajetória construída sobre disciplina, formação acadêmica continuada e
-              o estudo técnico do Direito Militar e da legislação aplicada ao setor aéreo
+              Formação acadêmica continuada e estudo técnico do Direito Militar e da legislação aplicada ao setor aéreo
               brasileiro.
             </p>
           </div>
@@ -38,30 +36,19 @@ export default function Sobre() {
               <p>
                 <span className="font-display italic text-gold-deep text-xl mr-1">F</span>
                 ormado em Direito e regularmente inscrito na Ordem dos Advogados do Brasil,
-                Dr. Alexandre Voigt reúne formação jurídica e quase três décadas de
-                serviço na segurança pública — combinação que orienta sua atuação em
-                duas frentes principais: o <strong className="font-medium text-navy-900">Direito Militar
+                Dr. Alexandre Voigt atua em duas frentes principais: o <strong className="font-medium text-navy-900">Direito Militar
                 e Policial</strong> e o Direito Aeronáutico do consumidor.
               </p>
               <p>
-                A trajetória como <strong className="font-medium text-navy-900">Tenente-coronel da Polícia Militar</strong>{' '}
-                — hoje na reserva — consolidou três valores que orientam o seu exercício
-                profissional na advocacia: o compromisso com a ética, a disciplina no
-                trato dos processos e a postura de servidor público diante do cidadão.
-              </p>
-              <p>
                 Mestre em Ciências Policiais de Segurança e Ordem Pública pelo Centro de
-                Altos Estudos de Segurança da PM/SP, é membro da Comissão de Direito
-                Militar da OAB/Santos e professor de Direito Constitucional, Direito Penal
-                Militar e Criminologia na Escola Superior de Soldados da Polícia Militar
-                de São Paulo.
+                Altos Estudos de Segurança da PM/SP e pós-graduado em Direito Militar e em
+                Direito Processual Civil, é membro da Comissão de Direito Militar da
+                OAB/Santos.
               </p>
               <p>
                 Em paralelo, dedica-se ao estudo dos direitos do passageiro aéreo,
                 previstos na Resolução nº 400 da ANAC, no Código de Defesa do Consumidor
-                e nas convenções internacionais aplicáveis ao transporte aéreo, sempre em
-                conformidade com o Estatuto da Advocacia e o Código de Ética e Disciplina
-                da OAB.
+                e nas convenções internacionais aplicáveis ao transporte aéreo.
               </p>
               <p>
                 É autor de obras voltadas a temas sensíveis do Direito e da segurança
@@ -85,33 +72,33 @@ export default function Sobre() {
               </div>
               <div>
                 <p className="text-[11px] uppercase tracking-wider3 text-navy-900/70 mb-2">
-                  Carreira Pública
+                  Pós-Graduação
                 </p>
                 <p className="font-display text-navy-900 text-lg leading-tight">
-                  Tenente-coronel da PM/SP
+                  Direito Militar
                 </p>
-                <p className="text-[12.5px] text-navy-900/65 mt-1">Oficial da reserva</p>
+                <p className="text-[12.5px] text-navy-900/65 mt-1">Faculdade Verbo Educacional</p>
               </div>
               <div>
                 <p className="text-[11px] uppercase tracking-wider3 text-navy-900/70 mb-2">
-                  Justiça Militar
+                  Pós-Graduação
                 </p>
                 <p className="font-display text-navy-900 text-lg leading-tight">
-                  Juiz Militar — TJM/SP
+                  Direito Processual Civil
                 </p>
                 <p className="text-[12.5px] text-navy-900/65 mt-1">
-                  Conselhos Permanente e Especial
+                  Faculdade de Direito Prof. Damásio de Jesus
                 </p>
               </div>
               <div>
                 <p className="text-[11px] uppercase tracking-wider3 text-navy-900/70 mb-2">
-                  Magistério
+                  OAB · Subseção Santos
                 </p>
                 <p className="font-display text-navy-900 text-lg leading-tight">
-                  Professor de Direito
+                  Comissão de Direito Militar
                 </p>
                 <p className="text-[12.5px] text-navy-900/65 mt-1">
-                  Escola Superior de Soldados PM/SP
+                  Membro
                 </p>
               </div>
             </Reveal>

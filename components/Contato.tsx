@@ -67,7 +67,7 @@ export default function Contato() {
           {/* Left: invitation */}
           <Reveal className="lg:col-span-7">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-6">
-              <span className="section-number">06</span>
+              <span className="section-number">05</span>
               <span className="h-px flex-1 bg-gold/25 max-w-[180px]" />
               <span className="text-[11px] uppercase tracking-wider3 text-gold/80">
                 Contato
@@ -75,16 +75,8 @@ export default function Contato() {
             </div>
 
             <h2 className="font-display text-[clamp(2.25rem,5.5vw,4.5rem)] leading-[1.02]">
-              Teve dúvidas sobre seus{' '}
-              <span className="serif-italic text-gold">direitos</span>{' '}
-              como passageiro?
+              Contato<span className="text-gold">.</span>
             </h2>
-
-            <p className="mt-8 max-w-xl text-bone/75 text-[15px] md:text-[16px] leading-relaxed font-light">
-              Entre em contato para uma orientação inicial, técnica e sem compromisso.
-              O atendimento parte sempre do que diz a legislação aplicável, com a
-              transparência exigida pelo Código de Ética da OAB.
-            </p>
 
             {/* Primary CTA */}
             <div className="mt-10 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-4 sm:gap-5">
@@ -95,7 +87,7 @@ export default function Contato() {
                 className="group inline-flex items-center justify-center gap-3 bg-gold text-navy-950 px-7 py-4 text-[12px] uppercase tracking-wider3 font-medium btn-shine hover:bg-gold-soft transition-colors duration-500"
               >
                 <IconWhatsApp className="w-4 h-4" />
-                Falar no WhatsApp
+                WhatsApp
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="transition-transform duration-500 group-hover:translate-x-1">
                   <path d="M0 7h12M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="square" />
                 </svg>

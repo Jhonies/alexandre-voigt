@@ -7,7 +7,6 @@ const links = [
   { label: 'Formação', href: '#formacao' },
   { label: 'Atuação', href: '#atuacao' },
   { label: 'Obras', href: '#livros' },
-  { label: 'Depoimentos', href: '#depoimentos' },
   { label: 'Contato', href: '#contato' },
 ];
 
@@ -143,7 +142,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="flex items-center justify-center gap-2 border border-gold/50 text-gold px-5 py-4 text-[11px] uppercase tracking-wider3"
             >
-              Falar agora
+              Contato
             </a>
           </li>
         </ul>

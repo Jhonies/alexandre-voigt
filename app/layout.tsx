@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 };
 
 const DESCRIPTION =
-  'Dr. Alexandre Voigt, advogado inscrito na OAB/SP, mestre em Ciências Policiais e Tenente-coronel da Polícia Militar (reserva), com atuação em Direito Militar e Policial e em Direito Aeronáutico. Atendimento em Santos/SP e em todo o Brasil.';
+  'Dr. Alexandre Voigt, advogado inscrito na OAB/SP e mestre em Ciências Policiais, com atuação em Direito Militar e Policial e em Direito Aeronáutico. Santos/SP.';
 
 const OG_DESCRIPTION =
   'Atuação em Direito Militar e Policial e em Direito Aeronáutico do consumidor.';
@@ -47,7 +47,6 @@ export const metadata: Metadata = {
   publisher: SITE_NAME,
   keywords: [
     'advogado direito militar',
-    'advogado militar Santos',
     'direito penal militar',
     'processo administrativo disciplinar militar',
     'advogado direito aeronáutico',

@@ -25,7 +25,6 @@ O projeto está organizado com a seguinte estrutura de arquivos:
   - `Formacao.tsx`: Timeline de formação acadêmica (1998–atual), bloco de atuação institucional/magistério e link para o Currículo Lattes (CNPq). Dados extraídos do Lattes ID 7928155562071787.
   - `Atuacoes.tsx`: Grid interativo que expõe as principais áreas jurídicas e de consultoria tratadas no escritório.
   - `Livros.tsx`: Apresentação em formato de estante/grid com as capas de livros publicados pelo autor.
-  - `Depoimentos.tsx`: Seção contendo as avaliações e opiniões dos clientes atendidos.
   - `Contato.tsx`: Formulário de contato estilizado integrado com informações de localização e atendimento.
   - `Footer.tsx`: Rodapé tradicional contendo direitos autorais e links institucionais.
   - `Reveal.tsx`: Wrapper utilitário que adiciona animações de transição suave (fade/translate) ao scroll usando Intersection Observer.

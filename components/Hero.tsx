@@ -1,4 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
 import Image from 'next/image';
+
+// Foto do hero: quando o PNG recortado (sem fundo) for adicionado em
+// public/images/alexandre-voigt.png, ele passa a ser usado automaticamente.
+// Até lá, mantém o JPEG atual. A checagem roda no build (componente de servidor).
+const FOTO_PNG = '/images/alexandre-voigt.png';
+const FOTO_JPEG = '/images/alexandre-voigt.jpeg';
+const temFotoRecortada = fs.existsSync(path.join(process.cwd(), 'public', FOTO_PNG));
 
 export default function Hero() {
   return (
@@ -61,8 +70,8 @@ export default function Hero() {
                   que as pessoas realmente pesquisam, sem alterar a arte. */}
               <span className="sr-only">
                 {' '}
-                — Advogado especialista em Direito Militar e Policial e em
-                Direito Aeronáutico, em Santos/SP
+                — Advogado · Direito Militar e Policial e Direito Aeronáutico,
+                em Santos/SP
               </span>
             </h1>
 
@@ -72,8 +81,6 @@ export default function Hero() {
               style={{ animationDelay: '0.5s', opacity: 0 }}
             >
               <span>Advogado</span>
-              <span className="text-gold/60">·</span>
-              <span>Tenente-coronel da PM (reserva)</span>
             </div>
 
             {/* Descriptor paragraph */}
@@ -81,9 +88,8 @@ export default function Hero() {
               className="mt-8 md:mt-10 max-w-xl text-bone/70 text-[15px] md:text-base leading-relaxed font-light animate-fade-up"
               style={{ animationDelay: '0.7s', opacity: 0 }}
             >
-              Trajetória construída no serviço público, na disciplina militar e no estudo
-              técnico do Direito. Atuação informativa sobre os direitos do passageiro
-              aéreo previstos na legislação brasileira.
+              Atuação em Direito Militar e Policial e em Direito Aeronáutico, com
+              conteúdo informativo sobre os direitos previstos na legislação brasileira.
             </p>
 
             {/* CTA */}
@@ -92,10 +98,10 @@ export default function Hero() {
               style={{ animationDelay: '0.9s', opacity: 0 }}
             >
               <a
-                href="#sobre"
+                href="#atuacao"
                 className="group inline-flex items-center justify-center gap-3 bg-gold text-navy-950 px-7 py-4 text-[12px] uppercase tracking-wider3 font-medium btn-shine hover:bg-gold-soft transition-colors duration-500"
               >
-                Conheça meu trabalho
+                Saiba mais
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="transition-transform duration-500 group-hover:translate-y-0.5">
                   <path d="M7 2v10M3 8l4 4 4-4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="square" />
                 </svg>
@@ -104,7 +110,7 @@ export default function Hero() {
                 href="#contato"
                 className="inline-flex items-center justify-center gap-2 py-3 sm:py-1 text-bone/80 hover:text-gold text-[12px] uppercase tracking-wider3 transition-colors duration-300 border-b border-gold/30 hover:border-gold"
               >
-                Tirar uma dúvida
+                Contato
               </a>
             </div>
           </div>
@@ -120,13 +126,23 @@ export default function Hero() {
                 {/* Soft gold glow */}
                 <div className="absolute -inset-6 bg-gold/5 blur-3xl rounded-full pointer-events-none" />
 
-                <div className="relative h-full w-full overflow-hidden border border-gold/30 bg-navy-800">
+                <div
+                  className={`relative h-full w-full overflow-hidden border border-gold/30 ${
+                    temFotoRecortada
+                      ? 'bg-gradient-to-b from-navy-800 via-navy-800/80 to-navy-950'
+                      : 'bg-navy-800'
+                  }`}
+                >
                   <Image
-                    src="/images/alexandre-voigt.jpeg"
+                    src={temFotoRecortada ? FOTO_PNG : FOTO_JPEG}
                     alt="Retrato do Dr. Alexandre Voigt"
                     fill
                     sizes="(min-width: 1024px) 40vw, 93vw"
-                    className="object-cover object-[center_18%] grayscale-[12%] contrast-105"
+                    className={
+                      temFotoRecortada
+                        ? 'object-contain object-bottom contrast-105'
+                        : 'object-cover object-[center_18%] grayscale-[12%] contrast-105'
+                    }
                     priority
                   />
                   {/* Top-to-bottom navy wash for legibility */}

@@ -47,11 +47,11 @@ export default function WhatsAppFlutuante() {
       href={WHATSAPP_HREF}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Falar no WhatsApp"
+      aria-label="WhatsApp"
       aria-hidden={!visivel}
       tabIndex={visivel ? 0 : -1}
-      className={`lg:hidden fixed z-40 right-5 bottom-5 h-14 w-14 flex items-center justify-center
-        bg-gold text-navy-950 shadow-[0_12px_30px_-8px_rgba(0,0,0,0.7)]
+      className={`lg:hidden fixed z-40 right-4 bottom-4 h-11 w-11 flex items-center justify-center
+        bg-navy-950/90 backdrop-blur-sm border border-gold/40 text-gold/90
         transition-all duration-300 ${
           visivel
             ? 'opacity-100 translate-y-0 pointer-events-auto'
@@ -59,7 +59,7 @@ export default function WhatsAppFlutuante() {
         }`}
       style={{ marginBottom: 'env(safe-area-inset-bottom)' }}
     >
-      <svg viewBox="0 0 24 24" fill="none" className="w-7 h-7" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" className="w-5 h-5" aria-hidden="true">
         <path
           d="M20.5 3.5A11.5 11.5 0 003.6 18.2L2.5 22l3.9-1A11.5 11.5 0 1020.5 3.5z"
           stroke="currentColor"

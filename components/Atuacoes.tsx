@@ -78,7 +78,7 @@ const cards = [
     Icon: IconMilitaryShield,
     title: 'Direito Militar e Policial',
     body:
-      'Atuação técnica em processos da Justiça Militar — defesa em inquéritos policiais militares, conselhos de justificação e de disciplina e procedimentos administrativos disciplinares envolvendo praças e oficiais. Área respaldada por mestrado em Ciências Policiais, pós-graduação em Direito Militar e docência na PM/SP.',
+      'Atuação técnica em processos da Justiça Militar — defesa em inquéritos policiais militares, conselhos de justificação e de disciplina e procedimentos administrativos disciplinares envolvendo praças e oficiais. Área respaldada por mestrado em Ciências Policiais e pós-graduação em Direito Militar.',
     ref: 'CPM · CPPM · Lei nº 13.491/17',
   },
   {
@@ -200,15 +200,6 @@ export default function Atuacoes() {
           })}
         </Reveal>
 
-        {/* Disclaimer footnote */}
-        <Reveal className="mt-12 flex items-start gap-3 max-w-3xl">
-          <span className="mt-2 h-px w-8 bg-gold/40 shrink-0" />
-          <p className="text-[12.5px] text-bone/65 leading-relaxed font-light">
-            Conteúdo de caráter informativo, em conformidade com o Provimento OAB nº 205/2021
-            e o Código de Ética e Disciplina da OAB. Não constitui promessa de resultado
-            nem captação de clientela.
-          </p>
-        </Reveal>
       </div>
     </section>
   );
