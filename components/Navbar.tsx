@@ -52,7 +52,7 @@ export default function Navbar() {
           href="#top"
           onClick={() => setOpen(false)}
           className="group flex items-center gap-3"
-          aria-label="Dr. Alexandre Voigt — início"
+          aria-label="Alexandre Voigt — início"
         >
           <Image
             src="/images/av-monograma.png"
@@ -64,7 +64,7 @@ export default function Navbar() {
           />
           <span className="hidden sm:block h-5 w-px bg-gold/40" />
           <span className="hidden sm:block font-display text-bone text-[15px] tracking-wide">
-            Dr. Alexandre Voigt
+            Alexandre Voigt
           </span>
         </a>
 

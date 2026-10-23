@@ -36,7 +36,7 @@ export default function Sobre() {
               <p>
                 <span className="font-display italic text-gold-deep text-xl mr-1">F</span>
                 ormado em Direito e regularmente inscrito na Ordem dos Advogados do Brasil,
-                Dr. Alexandre Voigt atua em duas frentes principais: o <strong className="font-medium text-navy-900">Direito Militar
+                Alexandre Voigt atua em duas frentes principais: o <strong className="font-medium text-navy-900">Direito Militar
                 e Policial</strong> e o Direito Aeronáutico do consumidor.
               </p>
               <p>

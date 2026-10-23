@@ -55,7 +55,7 @@ export default function Hero() {
               className="font-display text-bone leading-[0.95] tracking-tight animate-fade-up"
               style={{ animationDelay: '0.25s', opacity: 0 }}
             >
-              <span className="block text-[clamp(2.75rem,7vw,6rem)]">Dr. Alexandre</span>
+              <span className="block text-[clamp(2.75rem,7vw,6rem)]">Alexandre</span>
               <span className="block text-[clamp(2.75rem,7vw,6rem)]">
                 Voigt<span className="text-gold">.</span>
               </span>
@@ -123,7 +123,7 @@ export default function Hero() {
                 <div className="relative h-full w-full overflow-hidden border border-gold/30 bg-navy-800">
                   <Image
                     src={FOTO}
-                    alt="Dr. Alexandre Voigt em seu escritório"
+                    alt="Alexandre Voigt em seu escritório"
                     fill
                     sizes="(min-width: 1024px) 40vw, 93vw"
                     className="object-cover object-center"

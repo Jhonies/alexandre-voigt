@@ -17,7 +17,7 @@ export default function Footer() {
               />
               <span className="h-5 w-px bg-gold/40" />
               <span className="font-display text-bone text-[15px]">
-                Dr. Alexandre Voigt
+                Alexandre Voigt
               </span>
             </div>
             <p className="text-[13px] leading-relaxed font-light max-w-sm">
@@ -86,7 +86,7 @@ export default function Footer() {
         {/* Bottom row */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-[11.5px] text-bone/65">
           <p>
-            © {new Date().getFullYear()} Dr. Alexandre Voigt · Todos os direitos reservados.
+            © {new Date().getFullYear()} Alexandre Voigt · Todos os direitos reservados.
           </p>
           <p className="uppercase tracking-wider2">
             Site informativo · Não constitui captação de clientela

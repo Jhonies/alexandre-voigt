@@ -67,7 +67,7 @@ export function renderOgImage() {
               letterSpacing: -2,
             }}
           >
-            Dr. Alexandre Voigt
+            Alexandre Voigt
             <span style={{ color: GOLD }}>.</span>
           </div>
           <div

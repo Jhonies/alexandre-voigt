@@ -30,7 +30,7 @@ export const viewport: Viewport = {
 };
 
 const DESCRIPTION =
-  'Dr. Alexandre Voigt, advogado inscrito na OAB/SP e mestre em Ciências Policiais, com atuação em Direito Militar e Policial e em Direito Aeronáutico. Santos/SP.';
+  'Alexandre Voigt, advogado inscrito na OAB/SP e mestre em Ciências Policiais, com atuação em Direito Militar e Policial e em Direito Aeronáutico. Santos/SP.';
 
 const OG_DESCRIPTION =
   'Atuação em Direito Militar e Policial e em Direito Aeronáutico do consumidor.';
@@ -39,11 +39,11 @@ export const metadata: Metadata = {
   // Sem metadataBase o Next não resolve as URLs absolutas de canonical e de
   // Open Graph — os previews de link saem quebrados.
   metadataBase: new URL(SITE_URL),
-  title: 'Dr. Alexandre Voigt — Advogado | Direito Militar e Aeronáutico',
+  title: 'Alexandre Voigt — Advogado | Direito Militar e Aeronáutico',
   description: DESCRIPTION,
   applicationName: SITE_NAME,
-  authors: [{ name: 'Dr. Alexandre Voigt' }],
-  creator: 'Dr. Alexandre Voigt',
+  authors: [{ name: 'Alexandre Voigt' }],
+  creator: 'Alexandre Voigt',
   publisher: SITE_NAME,
   keywords: [
     'advogado direito militar',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   openGraph: {
-    title: 'Dr. Alexandre Voigt — Advogado',
+    title: 'Alexandre Voigt — Advogado',
     description: OG_DESCRIPTION,
     url: '/',
     siteName: SITE_NAME,
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dr. Alexandre Voigt — Advogado',
+    title: 'Alexandre Voigt — Advogado',
     description: OG_DESCRIPTION,
   },
 };
@@ -94,7 +94,7 @@ const personJsonLd = {
   '@type': 'Person',
   '@id': `${SITE_URL}/#pessoa`,
   name: 'Alexandre de Oliveira Voigt',
-  alternateName: 'Dr. Alexandre Voigt',
+  alternateName: 'Alexandre Voigt',
   jobTitle: 'Advogado',
   url: `${SITE_URL}/`,
   image: `${SITE_URL}/icon.png`,

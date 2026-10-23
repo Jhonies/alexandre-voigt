@@ -12,7 +12,7 @@ export const WHATSAPP_DISPLAY =
   process.env.NEXT_PUBLIC_WHATSAPP_DISPLAY || '(13) 98152-2764';
 
 export const WHATSAPP_MESSAGE =
-  'Olá, Dr. Alexandre.';
+  'Olá, Alexandre.';
 
 export const WHATSAPP_HREF = safeHref(
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`

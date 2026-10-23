@@ -7,6 +7,6 @@ export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL || 'https://alexandrevoigt.adv.br'
 ).replace(/\/$/, '');
 
-export const SITE_NAME = 'Dr. Alexandre Voigt — Advocacia';
+export const SITE_NAME = 'Alexandre Voigt — Advocacia';
 
 export const LATTES_URL = 'http://lattes.cnpq.br/7928155562071787';

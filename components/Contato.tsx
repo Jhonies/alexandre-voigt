@@ -198,12 +198,11 @@ export default function Contato() {
                 </li>
               </ul>
 
-              {/* Address — taken from public book imprint; confirm with client */}
+              {/* Endereço confirmado pelo cliente */}
               <div className="mt-8 pt-6 border-t border-bone/10">
                 <p className="text-[11px] uppercase tracking-wider3 text-bone/65 mb-2">
                   Atendimento
                 </p>
-                {/* TODO: confirmar endereço oficial atual */}
                 <address className="not-italic text-bone/85 text-[14px] leading-relaxed font-light">
                   {ENDERECO.logradouro} · {ENDERECO.complemento}
                   <br />
