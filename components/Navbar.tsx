@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const links = [
@@ -53,9 +54,14 @@ export default function Navbar() {
           className="group flex items-center gap-3"
           aria-label="Dr. Alexandre Voigt — início"
         >
-          <span className="font-display italic text-gold tracking-wider2 text-xl leading-none">
-            AV
-          </span>
+          <Image
+            src="/images/av-monograma.png"
+            alt="Monograma AV"
+            width={360}
+            height={253}
+            className="h-7 w-auto"
+            priority
+          />
           <span className="hidden sm:block h-5 w-px bg-gold/40" />
           <span className="hidden sm:block font-display text-bone text-[15px] tracking-wide">
             Dr. Alexandre Voigt

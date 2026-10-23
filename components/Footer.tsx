@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Footer() {
   return (
     <footer className="relative bg-ink text-bone/70 border-t border-gold/15">
@@ -6,9 +8,13 @@ export default function Footer() {
           {/* Identity */}
           <div className="md:col-span-5">
             <div className="flex items-center gap-3 mb-4">
-              <span className="font-display italic text-gold text-2xl leading-none">
-                AV
-              </span>
+              <Image
+                src="/images/av-monograma.png"
+                alt="Monograma AV"
+                width={360}
+                height={253}
+                className="h-8 w-auto"
+              />
               <span className="h-5 w-px bg-gold/40" />
               <span className="font-display text-bone text-[15px]">
                 Dr. Alexandre Voigt

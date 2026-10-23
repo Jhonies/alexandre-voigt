@@ -32,6 +32,7 @@ O projeto está organizado com a seguinte estrutura de arquivos:
   - `a-sociedade-do-medo.jpeg`: Capa de livro publicado.
   - `alexandre-voigt.jpeg`: Foto de perfil oficial do advogado.
   - `alexandre-voigt-escritorio.jpeg`: Foto do advogado no escritório, usada no Hero (CED, art. 44, §1º).
+  - `Monograma dourado AV com swoosh.png`: Logotipo original. Gera `app/icon.png`, `app/apple-icon.png` (favicon) e `public/images/av-monograma.png` (versão transparente usada no Navbar e no Footer).
   - `assedio.jpeg`: Capa de livro publicado.
   - `livro-parem-de-matar-nossas-rainhas.jpeg`: Capa de livro publicado.
 - **`public/`**: Ativos públicos servidos diretamente pelo servidor web.
