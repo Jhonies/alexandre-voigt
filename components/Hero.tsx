@@ -1,13 +1,7 @@
-import fs from 'node:fs';
-import path from 'node:path';
 import Image from 'next/image';
 
-// Foto do hero: quando o PNG recortado (sem fundo) for adicionado em
-// public/images/alexandre-voigt.png, ele passa a ser usado automaticamente.
-// Até lá, mantém o JPEG atual. A checagem roda no build (componente de servidor).
-const FOTO_PNG = '/images/alexandre-voigt.png';
-const FOTO_JPEG = '/images/alexandre-voigt.jpeg';
-const temFotoRecortada = fs.existsSync(path.join(process.cwd(), 'public', FOTO_PNG));
+// Foto do escritório — o CED, art. 44, §1º, permite a fotografia do escritório.
+const FOTO = '/images/alexandre-voigt-escritorio.jpeg';
 
 export default function Hero() {
   return (
@@ -118,35 +112,25 @@ export default function Hero() {
           {/* PORTRAIT */}
           <div className="lg:col-span-5">
             <div
-              className="relative mx-auto max-w-[360px] lg:max-w-none animate-fade-up"
+              className="relative mx-auto w-full max-w-[560px] lg:max-w-none animate-fade-up"
               style={{ animationDelay: '0.4s', opacity: 0 }}
             >
               {/* Plate frame */}
-              <div className="plate-corners relative aspect-[4/5] w-full">
+              <div className="plate-corners relative aspect-[4/3] w-full">
                 {/* Soft gold glow */}
                 <div className="absolute -inset-6 bg-gold/5 blur-3xl rounded-full pointer-events-none" />
 
-                <div
-                  className={`relative h-full w-full overflow-hidden border border-gold/30 ${
-                    temFotoRecortada
-                      ? 'bg-gradient-to-b from-navy-800 via-navy-800/80 to-navy-950'
-                      : 'bg-navy-800'
-                  }`}
-                >
+                <div className="relative h-full w-full overflow-hidden border border-gold/30 bg-navy-800">
                   <Image
-                    src={temFotoRecortada ? FOTO_PNG : FOTO_JPEG}
-                    alt="Retrato do Dr. Alexandre Voigt"
+                    src={FOTO}
+                    alt="Dr. Alexandre Voigt em seu escritório"
                     fill
                     sizes="(min-width: 1024px) 40vw, 93vw"
-                    className={
-                      temFotoRecortada
-                        ? 'object-contain object-bottom contrast-105'
-                        : 'object-cover object-[center_18%] grayscale-[12%] contrast-105'
-                    }
+                    className="object-cover object-center"
                     priority
                   />
-                  {/* Top-to-bottom navy wash for legibility */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/45 via-transparent to-navy-950/10 pointer-events-none" />
+                  {/* Leve escurecimento na base, sob a legenda */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/35 via-transparent to-transparent pointer-events-none" />
                 </div>
 
                 {/* Caption plate */}

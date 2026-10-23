@@ -31,6 +31,7 @@ O projeto está organizado com a seguinte estrutura de arquivos:
 - **`src/assets/img/`**: Pasta que concentra as imagens de alta resolução do site
   - `a-sociedade-do-medo.jpeg`: Capa de livro publicado.
   - `alexandre-voigt.jpeg`: Foto de perfil oficial do advogado.
+  - `alexandre-voigt-escritorio.jpeg`: Foto do advogado no escritório, usada no Hero (CED, art. 44, §1º).
   - `assedio.jpeg`: Capa de livro publicado.
   - `livro-parem-de-matar-nossas-rainhas.jpeg`: Capa de livro publicado.
 - **`public/`**: Ativos públicos servidos diretamente pelo servidor web.
