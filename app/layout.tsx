@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Playfair_Display, DM_Sans } from 'next/font/google';
 import { SITE_URL, SITE_NAME, LATTES_URL } from '@/lib/site';
-import { ENDERECO, EMAIL, INSTAGRAM, WHATSAPP_NUMBER } from '@/lib/contato';
+import { ENDERECO, EMAIL, HORARIO, INSTAGRAM, WHATSAPP_NUMBER } from '@/lib/contato';
 import './globals.css';
 
 // Only the weights the site actually renders. Playfair 600/700 and DM Sans
@@ -193,9 +193,9 @@ const legalServiceJsonLd = {
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '18:00',
+      dayOfWeek: [...HORARIO.dias],
+      opens: HORARIO.abre,
+      closes: HORARIO.fecha,
     },
   ],
   knowsAbout: [

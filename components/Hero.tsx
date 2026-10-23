@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 // Foto do escritório — o CED, art. 44, §1º, permite a fotografia do escritório.
-const FOTO = '/images/alexandre-voigt-escritorio.jpeg';
+const FOTO = '/images/alexandre-voigt-retrato.jpg';
 
 export default function Hero() {
   return (

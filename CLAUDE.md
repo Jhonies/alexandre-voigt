@@ -30,8 +30,7 @@ O projeto está organizado com a seguinte estrutura de arquivos:
   - `Reveal.tsx`: Wrapper utilitário que adiciona animações de transição suave (fade/translate) ao scroll usando Intersection Observer.
 - **`src/assets/img/`**: Pasta que concentra as imagens de alta resolução do site
   - `a-sociedade-do-medo.jpeg`: Capa de livro publicado.
-  - `alexandre-voigt.jpeg`: Foto de perfil oficial do advogado.
-  - `alexandre-voigt-escritorio.jpeg`: Foto do advogado no escritório, usada no Hero (CED, art. 44, §1º).
+  - `Retrato Executivo no Escritório_.png`: Foto do advogado no escritório. Gera `public/images/alexandre-voigt-retrato.jpg`, usada no Hero (CED, art. 44, §1º).
   - `Monograma dourado AV com swoosh.png`: Logotipo original. Gera `app/icon.png`, `app/apple-icon.png` (favicon) e `public/images/av-monograma.png` (versão transparente usada no Navbar e no Footer).
   - `assedio.jpeg`: Capa de livro publicado.
   - `livro-parem-de-matar-nossas-rainhas.jpeg`: Capa de livro publicado.

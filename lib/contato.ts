@@ -26,6 +26,17 @@ export const EMAIL =
   process.env.NEXT_PUBLIC_EMAIL || 'alexandrevoigt@adv.oabsp.org.br';
 
 /**
+ * Horário de atendimento (CED, art. 44, §1º, permite divulgar).
+ * Usado na seção de Contato e no JSON-LD do layout.
+ */
+export const HORARIO = {
+  texto: 'Segunda a sexta, das 9h às 18h',
+  dias: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+  abre: '09:00',
+  fecha: '18:00',
+} as const;
+
+/**
  * Endereço de atendimento. Centralizado aqui porque é consumido tanto pela
  * seção de Contato quanto pelo JSON-LD de `LegalService` no layout — os dois
  * precisam concordar, ou o Google trata como sinal local inconsistente.

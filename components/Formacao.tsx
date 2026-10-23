@@ -19,13 +19,6 @@ const titulos: Titulo[] = [
     instituicao: 'Academia de Polícia Militar do Barro Branco — APMBB',
   },
   {
-    periodo: '2003',
-    grau: 'Especialização',
-    curso: 'Polícia Judiciária Militar',
-    instituicao: 'Corregedoria da Polícia Militar do Estado de São Paulo',
-    detalhe: 'Processo Penal Militar e Direito Administrativo Disciplinar · 194h',
-  },
-  {
     periodo: '2009 — 2010',
     grau: 'Graduação',
     curso: 'Direito',

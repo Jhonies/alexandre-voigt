@@ -5,6 +5,7 @@ import {
   INSTAGRAM,
   EMAIL,
   ENDERECO,
+  HORARIO,
 } from '@/lib/contato';
 
 const IconWhatsApp = ({ className = '' }: { className?: string }) => (
@@ -208,6 +209,9 @@ export default function Contato() {
                   <br />
                   {ENDERECO.cidade} / {ENDERECO.uf} · CEP {ENDERECO.cep}
                 </address>
+                <p className="mt-3 text-bone/85 text-[14px] leading-relaxed font-light">
+                  {HORARIO.texto}
+                </p>
               </div>
             </div>
           </Reveal>
