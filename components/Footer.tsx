@@ -15,8 +15,8 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-[13px] leading-relaxed font-light max-w-sm">
-              Advocacia institucional com atuação informativa em Direito Aeronáutico
-              e direitos do passageiro aéreo.
+              Advocacia em Direito Militar e Policial, Direito Aeronáutico, Cível,
+              Bancário, Previdenciário e do Consumidor. Santos/SP.
             </p>
           </div>
 

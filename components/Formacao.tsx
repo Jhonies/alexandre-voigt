@@ -67,12 +67,6 @@ const institucional = [
     title: 'Comissão de Direito Militar',
     body: 'Membro da Comissão de Direito Militar da OAB — Subseção de Santos.',
   },
-  {
-    label: 'Pesquisa',
-    title: 'Orientação de mestrado — CAES',
-    body:
-      'Orientador de dissertação no Curso de Aperfeiçoamento de Oficiais do Centro de Altos Estudos de Segurança da PM/SP.',
-  },
 ];
 
 export default function Formacao() {
@@ -99,8 +93,8 @@ export default function Formacao() {
           </div>
           <div className="lg:col-span-5 lg:pl-8">
             <p className="text-bone/70 text-base leading-relaxed font-light">
-              Titulação acadêmica e atuação institucional registradas e verificáveis na
-              Plataforma Lattes do CNPq.
+              Títulos acadêmicos e instituições jurídicas de que faz parte, registrados e
+              verificáveis na Plataforma Lattes do CNPq.
             </p>
           </div>
         </Reveal>
@@ -154,7 +148,7 @@ export default function Formacao() {
           <div className="lg:col-span-5">
             <Reveal stagger className="lg:sticky lg:top-28">
               <p className="text-[11px] uppercase tracking-wider3 text-gold/80 mb-7">
-                Atuação institucional e acadêmica
+                Instituições jurídicas
               </p>
               <ul className="space-y-8 border-l border-bone/10 pl-7">
                 {institucional.map((item) => (

@@ -173,7 +173,6 @@ const legalServiceJsonLd = {
   image: `${SITE_URL}/opengraph-image`,
   telephone: `+${WHATSAPP_NUMBER}`,
   email: EMAIL,
-  priceRange: '$$',
   founder: { '@id': `${SITE_URL}/#pessoa` },
   employee: { '@id': `${SITE_URL}/#pessoa` },
   sameAs: [INSTAGRAM, LATTES_URL],
@@ -199,20 +198,16 @@ const legalServiceJsonLd = {
       closes: '18:00',
     },
   ],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Áreas de atuação',
-    itemListElement: [
-      'Direito Militar e Policial',
-      'Direito Penal e Processual Penal Militar',
-      'Processo Administrativo Disciplinar',
-      'Direito Aeronáutico e do consumidor aéreo',
-      'Direito Previdenciário militar',
-    ].map((name) => ({
-      '@type': 'Offer',
-      itemOffered: { '@type': 'Service', name },
-    })),
-  },
+  knowsAbout: [
+    'Direito Militar e Policial',
+    'Direito Penal e Processual Penal Militar',
+    'Direito Administrativo Disciplinar',
+    'Direito Aeronáutico',
+    'Direito Cível',
+    'Direito Bancário',
+    'Direito Previdenciário',
+    'Direito do Consumidor',
+  ],
 };
 
 const websiteJsonLd = {

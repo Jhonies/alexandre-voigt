@@ -78,28 +78,28 @@ const cards = [
     Icon: IconMilitaryShield,
     title: 'Direito Militar e Policial',
     body:
-      'Atuação técnica em processos da Justiça Militar — defesa em inquéritos policiais militares, conselhos de justificação e de disciplina e procedimentos administrativos disciplinares envolvendo praças e oficiais. Área respaldada por mestrado em Ciências Policiais e pós-graduação em Direito Militar.',
+      'Atuação em Direito Penal e Processual Penal Militar e em Direito Administrativo Disciplinar aplicável às carreiras militares e policiais. Área relacionada ao mestrado em Ciências Policiais e à pós-graduação em Direito Militar.',
     ref: 'CPM · CPPM · Lei nº 13.491/17',
   },
   {
     Icon: IconAircraft,
     title: 'Direito Aeronáutico',
     body:
-      'Orientação informativa sobre os direitos do passageiro aéreo em casos de atraso, cancelamento, preterição de embarque e extravio de bagagem, nos voos domésticos e internacionais.',
+      'Atuação nas relações entre passageiros e companhias aéreas, conforme a regulação da ANAC, o Código de Defesa do Consumidor e as convenções internacionais de transporte aéreo.',
     ref: 'Resolução ANAC nº 400 · Convenção de Montreal',
   },
   {
     Icon: IconScales,
     title: 'Direito Cível',
     body:
-      'Orientação consultiva e contenciosa em responsabilidade civil, obrigações, contratos e demais relações privadas — conduzidas com rigor técnico e atenção ao caso concreto.',
+      'Atuação consultiva e contenciosa nas relações privadas, com base no Código Civil e no Código de Processo Civil.',
     ref: 'Código Civil · CPC',
   },
   {
     Icon: IconBank,
     title: 'Contratos Bancários',
     body:
-      'Análise e revisão de cláusulas abusivas em contratos bancários, capitalização de juros, tarifas indevidas e renegociação de dívidas com instituições financeiras.',
+      'Atuação nas relações contratuais com instituições financeiras, à luz do Código de Defesa do Consumidor e da jurisprudência do Superior Tribunal de Justiça.',
     ref: 'CDC · Súmulas do STJ',
   },
   {
@@ -113,7 +113,7 @@ const cards = [
     Icon: IconBag,
     title: 'Direito do Consumidor',
     body:
-      'Defesa do consumidor em cobranças indevidas, vícios e defeitos de produtos e serviços, contratos de adesão e demais práticas abusivas no mercado de consumo.',
+      'Atuação nas relações de consumo, com base no Código de Defesa do Consumidor.',
     ref: 'CDC (Lei nº 8.078/90)',
   },
 ];
@@ -147,16 +147,13 @@ export default function Atuacoes() {
               </span>
             </div>
             <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[1.05]">
-              Seis frentes de{' '}
-              <span className="serif-italic text-gold">atuação jurídica</span>{' '}
-              em que o escritório dedica seu trabalho.
+              Áreas de{' '}
+              <span className="serif-italic text-gold">atuação jurídica</span>.
             </h2>
           </div>
           <div className="lg:col-span-5 lg:pl-8">
             <p className="text-bone/70 text-base leading-relaxed font-light">
-              Apresentação informativa das áreas de estudo e atuação técnica. As
-              orientações partem sempre da legislação vigente e dos precedentes
-              consolidados.
+              Apresentação informativa das áreas a que o advogado se dedica.
             </p>
           </div>
         </Reveal>

@@ -95,8 +95,6 @@ export function renderOgImage() {
         >
           <span>OAB/SP 548.991</span>
           <span style={{ color: `${GOLD}AA` }}>·</span>
-          <span>Ten.-cel. PM (reserva)</span>
-          <span style={{ color: `${GOLD}AA` }}>·</span>
           <span>Santos / SP</span>
         </div>
       </div>
