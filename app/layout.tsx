@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Playfair_Display, DM_Sans } from 'next/font/google';
+import Script from 'next/script';
 import { SITE_URL, SITE_NAME, LATTES_URL } from '@/lib/site';
 import { ENDERECO, EMAIL, HORARIO, INSTAGRAM, WHATSAPP_NUMBER } from '@/lib/contato';
 import './globals.css';
@@ -220,6 +221,12 @@ const websiteJsonLd = {
   publisher: { '@id': `${SITE_URL}/#pessoa` },
 };
 
+// IDs enviados pela prestadora dos anúncios. GA4 e GTM dividem o mesmo
+// `dataLayer` — se o GTM também disparar uma tag GA4 com este ID, as visitas
+// contam em dobro.
+const GA_ID = 'G-QW2ZFPRNV3';
+const GTM_ID = 'GTM-MH3WKRCS';
+
 export default function RootLayout({
   children,
 }: {
@@ -228,6 +235,31 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${playfair.variable} ${dmSans.variable}`}>
       <body className="font-sans bg-navy-900 text-bone antialiased">
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`}
+        </Script>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_ID}');`}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
