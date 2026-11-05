@@ -6,13 +6,13 @@ import { safeHref } from './safe-url';
  * texto da mensagem existam em um único lugar.
  */
 export const WHATSAPP_NUMBER =
-  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5513981522764';
+  process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5513996384028';
 
 export const WHATSAPP_DISPLAY =
-  process.env.NEXT_PUBLIC_WHATSAPP_DISPLAY || '(13) 98152-2764';
+  process.env.NEXT_PUBLIC_WHATSAPP_DISPLAY || '(13) 99638-4028';
 
 export const WHATSAPP_MESSAGE =
-  'Olá, Alexandre.';
+  'Olá, vim pelo site do Alexandre Voigt e gostaria de mais informações sobre atendimento jurídico!';
 
 export const WHATSAPP_HREF = safeHref(
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
