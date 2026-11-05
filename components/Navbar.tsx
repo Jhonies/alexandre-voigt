@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { WHATSAPP_HREF } from '@/lib/contato';
 
 const links = [
   { label: 'Trajetória', href: '#sobre' },
@@ -85,10 +86,12 @@ export default function Navbar() {
 
         {/* CTA */}
         <a
-          href="#contato"
+          href={WHATSAPP_HREF}
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden lg:inline-flex items-center gap-2 border border-gold/50 text-gold hover:text-navy-950 hover:bg-gold/90 transition-colors duration-500 px-5 py-2.5 text-[11px] uppercase tracking-wider3 btn-shine"
         >
-          <span>Contato</span>
+          <span>WhatsApp</span>
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="square" />
           </svg>
@@ -144,11 +147,13 @@ export default function Navbar() {
           ))}
           <li className="pt-3 pb-2">
             <a
-              href="#contato"
+              href={WHATSAPP_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="flex items-center justify-center gap-2 border border-gold/50 text-gold px-5 py-4 text-[11px] uppercase tracking-wider3"
             >
-              Contato
+              WhatsApp
             </a>
           </li>
         </ul>

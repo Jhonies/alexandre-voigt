@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { WHATSAPP_HREF } from '@/lib/contato';
 
 // Foto do escritório — o CED, art. 44, §1º, permite a fotografia do escritório.
 const FOTO = '/images/alexandre-voigt-retrato.jpg';
@@ -101,10 +102,12 @@ export default function Hero() {
                 </svg>
               </a>
               <a
-                href="#contato"
+                href={WHATSAPP_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 py-3 sm:py-1 text-bone/80 hover:text-gold text-[12px] uppercase tracking-wider3 transition-colors duration-300 border-b border-gold/30 hover:border-gold"
               >
-                Contato
+                WhatsApp
               </a>
             </div>
           </div>
