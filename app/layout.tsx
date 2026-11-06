@@ -224,7 +224,7 @@ const websiteJsonLd = {
 // IDs enviados pela prestadora dos anúncios. GA4 e GTM dividem o mesmo
 // `dataLayer` — se o GTM também disparar uma tag GA4 com este ID, as visitas
 // contam em dobro.
-const GA_ID = 'G-QW2ZFPRNV3';
+const GA_ID = 'G-FYH4Q2MJZL';
 const GTM_ID = 'GTM-MH3WKRCS';
 
 export default function RootLayout({
