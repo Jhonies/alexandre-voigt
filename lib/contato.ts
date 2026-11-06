@@ -12,7 +12,7 @@ export const WHATSAPP_DISPLAY =
   process.env.NEXT_PUBLIC_WHATSAPP_DISPLAY || '(13) 99638-4028';
 
 export const WHATSAPP_MESSAGE =
-  'Olá, vim pelo site do Alexandre Voigt e gostaria de mais informações sobre atendimento jurídico!';
+  'Olá! Encontrei o contato do Alexandre Voigt pelo Google e gostaria de mais informações sobre o atendimento jurídico.';
 
 export const WHATSAPP_HREF = safeHref(
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`
