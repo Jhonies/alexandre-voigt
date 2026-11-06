@@ -1,17 +1,18 @@
 const isDev = process.env.NODE_ENV !== 'production';
 
 // Google Analytics, Tag Manager e Google Ads (conversões disparadas pelo GTM).
-// Sem estes domínios o navegador bloqueia as tags do layout.
-const GOOGLE_SCRIPT = 'https://*.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com';
-const GOOGLE_IMG = 'https://*.google-analytics.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com https://www.google.com.br';
+// Sem estes domínios o navegador bloqueia as tags do layout. tagmanager.google.com
+// e gstatic.com são do modo Preview do GTM, usado para testar os acionadores.
+const GOOGLE_SCRIPT = 'https://*.googletagmanager.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google.com https://tagmanager.google.com';
+const GOOGLE_IMG = 'https://ssl.gstatic.com https://www.gstatic.com https://*.google-analytics.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com https://www.google.com.br';
 const GOOGLE_CONNECT = 'https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com https://www.googleadservices.com https://pagead2.googlesyndication.com';
 const GOOGLE_FRAME = 'https://www.googletagmanager.com https://td.doubleclick.net https://bid.g.doubleclick.net';
 
 const cspDirectives = [
   "default-src 'self'",
   `script-src 'self' 'unsafe-inline' ${GOOGLE_SCRIPT}${isDev ? " 'unsafe-eval'" : ''}`,
-  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-  "font-src 'self' https://fonts.gstatic.com",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://tagmanager.google.com https://www.googletagmanager.com",
+  "font-src 'self' data: https://fonts.gstatic.com",
   `img-src 'self' data: blob: ${GOOGLE_IMG}`,
   `connect-src 'self' ${GOOGLE_CONNECT}${isDev ? ' ws: http://localhost:* https://localhost:*' : ''}`,
   `frame-src ${GOOGLE_FRAME}`,
