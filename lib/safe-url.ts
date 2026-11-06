@@ -9,8 +9,8 @@ const ALLOWED_DOMAINS: string[] = [
   'alexandrevoigt.hotmart.host',
   'go.hotmart.com',
   'drive.google.com',
-  'alexandrevoigt.adv.br',
-  'www.alexandrevoigt.adv.br',
+  'alexandrevoigt.com.br',
+  'www.alexandrevoigt.com.br',
 ];
 
 /**

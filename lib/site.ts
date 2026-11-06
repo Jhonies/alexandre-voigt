@@ -4,7 +4,7 @@
  * para os três discordarem em staging ou numa troca de domínio.
  */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://alexandrevoigt.adv.br'
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.alexandrevoigt.com.br'
 ).replace(/\/$/, '');
 
 export const SITE_NAME = 'Alexandre Voigt — Advocacia';
